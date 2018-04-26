@@ -94,7 +94,7 @@ class LisDuple:
                 else:
                     antes=aux1.prev
                     despues=aux1.next
-                    antes.next=depues
+                    antes.next= despues
                     despues.prev=antes
 
             return True
@@ -139,21 +139,22 @@ def Intercalar(lista,lista2):
 
 # Adiciona um elemento x num conjunto
 #O(n)
-    def Adicionar(lista,x):
-        if lista.__len__()==0:
-            lista.append(x)
-        else:
-            for i in range(len(lista)):
-                if lista[i]>x:
-                    lista.insert(i,x)
-                    break
+def Adicionar(lista,x):
+    if lista.__len__()==0:
+        lista.append(x)
+    else:
+        for i in range(len(lista)):
+            if lista[i]>x:
+                lista.insert(i,x)
+                break
 
 #Determina a união de dois conjutos
 #O(n)
 def Union(conjunto1,conjunto2):
 
     for i in range(len(conjunto2)):
-        Adicionar(conjunto1,conjunto2[i])
+        if conjunto2[i] not in conjunto1:
+            Adicionar(conjunto1,conjunto2[i])
 
 
 
@@ -194,37 +195,46 @@ def Iguales(conjunto1,conjunto2):
 #Vazia( F )
 #Vazia(P)
 
-class pila:
-    def __init__(self):
-        self.pila=[]
-    def Empilha( self, x ):
-        self.pila.append(x)
-    def Desempilha(self):
-        x=self.pila.pop()
-        return x
+
+def Empilha(pila, x ):
+    pila.append(x)
+
+def Desempilha(pila):
+    x=pila.pop()
+    return x
+
+def Enfilar(fila,x):
+    fila.append(x)
+
+def Desenfilar(fila):
+    x=fila[0]
+    fila.remove(x)
+
+    return x
+
+def Vazia(fila):
+    if len(fila)==0:
+        return True
+    else:
+        return False
+
+def Invertir(F):
+    if Vacia(F):
+        print("Fila Vacia")
+    else:
+        p=[]
+        while(not Vacia(F)):
+            x=Desenfilar(F)
+            Empilha(p,x)
+        while(not Vacia(p)):
+            x=Desempilha(p)
+            Enfilar(F,x)
+    return F
 
 
-class fila:
-    def __init__(self):
-        self.fila = []
-
-    def Enfileira(self,x):
-        self.fila.append(x)
-
-    def Desenfileira(self):
-        x=self.fila.pop(0)
-        return x
 
 
-def invertir(f):
-    pila1=pila()
-    while(Vacia(f)==False):
-        pila1.Empilha(f.Desenfileira())
 
-    while(Vacia(pila1)==False):
-        f.Enfileira(pila1.Desempilha())
-
-    return f
 
 
 

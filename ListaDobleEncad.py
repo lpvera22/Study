@@ -64,7 +64,7 @@ def Eliminar(lista,x):#O(n)
     else:
         print('El elemento no se encuentra')
         
-def ListasIntercaladas(lista,lista2):
+def ListasIntercaladas(lista,lista2): #O(n)
 
     while(lista2.inicio.next!=None):
 
@@ -79,8 +79,11 @@ def ImprimirLista(lista):#O(n)
         lista.inicio=lista.inicio.next
     print(lista.fin.data)
 
-def DestruirLista(lista):
+def DestruirLista(lista):#O(1)
     lista.inicio=lista.fin=None
+
+#EJERCICIO 8
+
 
 
 
