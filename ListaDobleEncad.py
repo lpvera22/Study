@@ -16,7 +16,7 @@ class ListaDoEnca:
         else:
             return False
 
-    def Inserir(x):#O(n)
+    def Inserir(self,x):#O(n)
         new_nodo=Node(x)
 
         if self.ListaVacia():
@@ -68,14 +68,22 @@ def ListasIntercaladas(lista,lista2):
 
     while(lista2.inicio.next!=None):
 
-        lista.Inserir(lista.inicio)
+        lista.Inserir(lista2.inicio)
+        lista2.inicio=lista2.inicio.next
+
+    return lista
+
+def ImprimirLista(lista):#O(n)
+    while(lista.next!=None):
+        print(lista.inicio.data)
         lista.inicio=lista.inicio.next
+    print(lista.fin.data)
 
-    return lista2
+def DestruirLista(lista):
+    lista.inicio=lista.fin=None
 
 
 
-ee64564
 
 
 

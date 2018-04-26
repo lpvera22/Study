@@ -29,7 +29,7 @@ class LisDuple:
         self.tail=None
 #Cria a lista vazia, Localiza, Insere e Remove
     def LisVazia(self):
-        if self.head==None
+        if self.head==None:
             return True
         else:
             return False

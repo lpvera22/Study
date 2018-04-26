@@ -102,10 +102,15 @@ class LisDuple:
 
 #Intercalar duas listas ordenadas (gerando uma única lista ordenada contendo todos os elementos)
 # O(n)
-    def Intercalar(self,lista2):
-        aux=lista2.head
-        while(aux!=lista2.tail):
-            self.Inserir(aux.data)
+def Intercalar(lista,lista2):
+
+    while (lista2.head.next != None):
+        lista.Inserir(lista2.head)
+        lista2.head = lista2.head.next
+
+    return lista
+
+
 
 
 
