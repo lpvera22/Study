@@ -1,4 +1,6 @@
 import numpy as np
+import random
+from time import time
 #Arreglo ordenado
 class FilaPrioridad:
     def __init__(self,MAX):
@@ -90,7 +92,7 @@ class FilaPrioridadDesordenado:
         pos=self.BuscarElemMayorPrior()
         return self.fila[pos]
 
-class FilaPrioridad:
+class FilaPrioridadH:
     def __init__(self, MAX):
         self.fila = np.zeros(MAX, dtype=int)
         self.MAX = MAX
@@ -137,6 +139,34 @@ class FilaPrioridad:
                     i = 2 * i + 2
 
             return x
+
+    def VerificarH(self):
+        return self.fila[0]
+
+
+
+
+if __name__=="__main__":
+
+    filaD=FilaPrioridadDesordenado(100)
+    filaOr=FilaPrioridad(100)
+    filaheap=FilaPrioridadH(100)
+
+    time1=time()
+    for i in range(100):
+        filaD.InserirD(random.randint())
+    print(time()-time1)
+
+    time2 = time()
+    for i in range(100):
+        filaOr.Inserir(random.randint())
+    print(time() - time2)
+
+    time3 = time()
+    for i in range(100):
+        filaheap.InsertarH(random.randint())
+    print(time() - time3)
+
 
 
 
