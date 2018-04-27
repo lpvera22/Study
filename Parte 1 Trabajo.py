@@ -91,7 +91,7 @@ class FilaPrioridadDesordenado:
             print('Fila Vacia')
         else:
             pos=self.BuscarElemMayorPrior()
-            for i in range(pos,len(self.fila)):
+            for i in range(pos,self.cantidad-1):
                 self.fila[i]=self.fila[i+1]
             self.cantidad-=1
 
@@ -160,12 +160,12 @@ class FilaPrioridadH:
 
 if __name__=="__main__":
     tam = 10
-    xtam=[]
-    dados=[[]]*3
+    filaD=None
+    filaOr=None
+    filaheap=None
     for i in range(5):
         tam=tam*10
-        xtam.append(tam)
-        print(tam)
+        print("tamnho: "+str(tam))
 
         filaD=FilaPrioridadDesordenado(tam)
         filaOr=FilaPrioridad(tam)
@@ -174,25 +174,48 @@ if __name__=="__main__":
         time1=time()
         for i in range(tam):
             filaD.InserirD(random.randint(0,1000))
-        print("%.4f" %float(time()-time1))
+        timestamp = round(float(time()-time1),4)
+        print("%f" %timestamp)
         #print (filaD.fila)
 
         time2 = time()
         for i in range(tam):
            filaOr.Inserir(random.randint(0,1000))
-        print("%.4f" %float(time() - time2))
+        timestamp2 = round(float(time() - time2),4)
+        print("%f" %timestamp2)
        # print(filaOr.fila)
 
         time3 = time()
         for i in range(tam):
             filaheap.InsertarH(random.randint(0,1000))
-        print("%.4f" %float(time() - time3))
+        timestamp3 = round(float(time() - time3),4)
+        print("%f" %timestamp3)
         #print(filaheap.fila)
         print("----------")
 
 
 
+    # cant = random.randint(0,100)
+    cant = 100
+    print ('Remover: ' +str(cant)+' vezes')
+    time1 = time()
+    for i in range(cant):
+        filaD.RemoverD()
+    timestamp = round(float(time() - time1), 4)
+    print("%f" % timestamp)
+    print('-----------------')
+    time2 = time()
+    for i in range(cant):
+        filaOr.Remover()
+    timestamp1 = round(float(time() - time2), 4)
+    print("%f" % timestamp1)
 
+    print('-----------------')
+    time3 = time()
+    for i in range(cant):
+        filaheap.RemoverH()
+    timestamp2 = round(float(time() - time3), 4)
+    print("%f" % timestamp2)
 
         
 
