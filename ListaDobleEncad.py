@@ -242,7 +242,7 @@ def Tamaño(arbol):
         return 1
 
     else:
-
+        pass
 
 
 

@@ -1,7 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import random
 from time import time
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 #Arreglo ordenado
 class FilaPrioridad:
@@ -139,7 +142,7 @@ class FilaPrioridadH:
             x=self.fila[0]
             i=0
             self.fila[0]=self.fila[self.cantidad-1]
-            self.fila[self.cantidad-1]=0
+            self.fila[self.cantidad-1]=None
             while(i<=(self.cantidad/2)-1):
                 if self.fila[2*i+1]>self.fila[2*i+2]:
                     self.fila[i],self.fila[2*i+1]=self.fila[2*i+1],self.fila[i]
@@ -149,7 +152,7 @@ class FilaPrioridadH:
                     self.fila[i], self.fila[2 * i + 2] = self.fila[2 * i + 2], self.fila[i]
 
                     i = 2 * i + 2
-
+                self.cantidad-=1
             return x
 
     def VerificarH(self):
@@ -163,9 +166,10 @@ if __name__=="__main__":
     filaD=None
     filaOr=None
     filaheap=None
+    print('Inserção')
     for i in range(5):
         tam=tam*10
-        print("tamnho: "+str(tam))
+        print("tamnho:: "+str(tam))
 
         filaD=FilaPrioridadDesordenado(tam)
         filaOr=FilaPrioridad(tam)
@@ -175,47 +179,56 @@ if __name__=="__main__":
         for i in range(tam):
             filaD.InserirD(random.randint(0,1000))
         timestamp = round(float(time()-time1),4)
-        print("%f" %timestamp)
+        print("FilaD: %f" %timestamp)
         #print (filaD.fila)
 
         time2 = time()
         for i in range(tam):
            filaOr.Inserir(random.randint(0,1000))
         timestamp2 = round(float(time() - time2),4)
-        print("%f" %timestamp2)
+        print("FilaOr: %f" %timestamp2)
        # print(filaOr.fila)
 
         time3 = time()
         for i in range(tam):
             filaheap.InsertarH(random.randint(0,1000))
         timestamp3 = round(float(time() - time3),4)
-        print("%f" %timestamp3)
+        print("Heap: %f" %timestamp3)
         #print(filaheap.fila)
         print("----------")
 
+    # filaheap = FilaPrioridadH(10)
+    # filaheap.InsertarH(25)
+    # filaheap.InsertarH(65)
+    # filaheap.InsertarH(2)
+    # filaheap.InsertarH(125)
+    # filaheap.InsertarH(84)
+    # print(filaheap.fila)
+    # filaheap.RemoverH()
+    # print(filaheap.fila)
+    cant =0
+    for i in range(5):
+        #cant = random.randint(0,100)
+        cant = cant+15
+        print ('Remover: ' +str(cant)+' vezes')
+        time1 = time()
+        for i in range(cant):
+            filaD.RemoverD()
+        timestamp = round(float(time() - time1), 4)
+        print("FilaD: %f" % timestamp)
 
+        time2 = time()
+        for i in range(cant):
+            filaOr.Remover()
+        timestamp1 = round(float(time() - time2), 4)
+        print("FilaOr: %f" % timestamp1)
 
-    # cant = random.randint(0,100)
-    cant = 100
-    print ('Remover: ' +str(cant)+' vezes')
-    time1 = time()
-    for i in range(cant):
-        filaD.RemoverD()
-    timestamp = round(float(time() - time1), 4)
-    print("%f" % timestamp)
-    print('-----------------')
-    time2 = time()
-    for i in range(cant):
-        filaOr.Remover()
-    timestamp1 = round(float(time() - time2), 4)
-    print("%f" % timestamp1)
-
-    print('-----------------')
-    time3 = time()
-    for i in range(cant):
-        filaheap.RemoverH()
-    timestamp2 = round(float(time() - time3), 4)
-    print("%f" % timestamp2)
+        time3 = time()
+        for i in range(cant):
+            filaheap.RemoverH()
+        timestamp2 = round(float(time() - time3), 4)
+        print("Heap: %f" % timestamp2)
+        print('-----------------')
 
         
 

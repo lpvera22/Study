@@ -109,13 +109,7 @@ def InserirNoRec(arbol,key):
 
 
 def Eliminar(arbol,node):
-
-
-
-
-    else:
-        print('Elemento no encontrado')
-
+    pass
 
 
 
