@@ -5,6 +5,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="numpy" />
+          <option value="heapq.heappop" />
         </list>
       </option>
     </inspection_tool>
