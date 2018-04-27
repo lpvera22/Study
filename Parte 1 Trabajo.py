@@ -1,31 +1,37 @@
 import numpy as np
 import random
 from time import time
+import matplotlib.pyplot as plt
+
 #Arreglo ordenado
 class FilaPrioridad:
     def __init__(self,MAX):
-        self.fila=np.zeros(MAX,dtype=int)
+        self.fila=np.array([None]*MAX)
         self.MAX=MAX
+        self.cantidad=0
 
     def FilaVacia(self):
-        if len(self.fila)==0:
+        if self.cantidad==0:
             return True
         else:
             return False
 
 
     def Inserir(self,elem):
-        if len(self.fila)<self.MAX:
-            self.fila[len(self.fila)]=elem
+
+        if self.cantidad<self.MAX:
+            self.fila[self.cantidad]=elem
             pos=len(self.fila)-1
             while(self.fila[pos]>self.fila[pos-1] and pos!=0):
                 aux=self.fila[pos-1]
                 self.fila[pos-1]=self.fila[pos]
                 self.fila[pos]=aux
                 pos=pos-1
+            self.cantidad+=1
             return True
         elif self.FilaVacia():
             self.fila[0]=elem
+            self.cantidad+=1
 
         else:
             print('Fila llena')
@@ -43,21 +49,25 @@ class FilaPrioridad:
 
 class FilaPrioridadDesordenado:
     def __init__(self, MAX):
-        self.fila = np.zeros(MAX, dtype=int)
+        self.fila = np.array([None]*MAX)
         self.MAX = MAX
+        self.cantidad = 0
 
     def FilaVacia(self):
-        if len(self.fila) == 0:
+        if self.cantidad == 0:
             return True
         else:
             return False
 #Arreglo desordenado
     def InserirD(self, elem):
-        if len(self.fila) < self.MAX:
-            self.fila[len(self.fila)] = elem
+
+        if self.cantidad < self.MAX:
+            self.fila[self.cantidad] = elem
+            self.cantidad+=1
 
         elif self.FilaVacia():
             self.fila[0] = elem
+            self.cantidad+=1
 
         else:
             print('Fila llena')
@@ -83,7 +93,7 @@ class FilaPrioridadDesordenado:
             pos=self.BuscarElemMayorPrior()
             for i in range(pos,len(self.fila)):
                 self.fila[i]=self.fila[i+1]
-
+            self.cantidad-=1
 
 
 
@@ -94,7 +104,7 @@ class FilaPrioridadDesordenado:
 
 class FilaPrioridadH:
     def __init__(self, MAX):
-        self.fila = np.zeros(MAX, dtype=int)
+        self.fila = np.array([None]*MAX)
         self.MAX = MAX
         self.cantidad=0
 
@@ -107,14 +117,16 @@ class FilaPrioridadH:
     def InsertarH(self,elem):
         if self.FilaVacia():
             self.fila[0]=elem
-        elif len(self.fila)==self.MAX:
+
+
+        elif self.cantidad==self.MAX:
             print('Fila llena')
         else:
-            self.fila[len(self.fila)]=elem
-            pos=len(self.fila)
+            self.fila[self.cantidad]=elem
+            pos=self.cantidad
             j=pos/2
-            while(self.fila[pos-1]>self.fila[j-1]):
-                self.fila[j-1],self.fila[pos-1]=self.fila[pos-1],self.fila[j-1]
+            while(self.fila[pos]>self.fila[j]):
+                self.fila[j],self.fila[pos]=self.fila[pos],self.fila[j]
 
                 pos=j
                 j=pos/2
@@ -147,27 +159,36 @@ class FilaPrioridadH:
 
 
 if __name__=="__main__":
+    tam = 10
+    xtam=[]
+    dados=[[]]*3
+    for i in range(5):
+        tam=tam*10
+        xtam.append(tam)
+        print(tam)
 
-    filaD=FilaPrioridadDesordenado(100)
-    filaOr=FilaPrioridad(100)
-    filaheap=FilaPrioridadH(100)
+        filaD=FilaPrioridadDesordenado(tam)
+        filaOr=FilaPrioridad(tam)
+        filaheap=FilaPrioridadH(tam)
 
-    time1=time()
-    for i in range(100):
-        filaD.InserirD(random.randint())
-    print(time()-time1)
+        time1=time()
+        for i in range(tam):
+            filaD.InserirD(random.randint(0,1000))
+        print("%.4f" %float(time()-time1))
+        #print (filaD.fila)
 
-    time2 = time()
-    for i in range(100):
-        filaOr.Inserir(random.randint())
-    print(time() - time2)
+        time2 = time()
+        for i in range(tam):
+           filaOr.Inserir(random.randint(0,1000))
+        print("%.4f" %float(time() - time2))
+       # print(filaOr.fila)
 
-    time3 = time()
-    for i in range(100):
-        filaheap.InsertarH(random.randint())
-    print(time() - time3)
-
-
+        time3 = time()
+        for i in range(tam):
+            filaheap.InsertarH(random.randint(0,1000))
+        print("%.4f" %float(time() - time3))
+        #print(filaheap.fila)
+        print("----------")
 
 
 
