@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from heapq import heappush, heappop
 import numpy as np
 import random
 from time import time
-#import matplotlib.pyplot as plt
 
-#Arreglo ordenado
+#Array ordenado
 class FilaPrioridad:
     def __init__(self,MAX):
         self.fila=np.array([None]*MAX)
@@ -14,6 +14,7 @@ class FilaPrioridad:
         self.cantidad=0
 
     def FilaVacia(self):
+        '''Verifica se é vazia olhando se a quantidade é 0'''
         if self.cantidad==0:
             return True
         else:
@@ -21,7 +22,8 @@ class FilaPrioridad:
 
 
     def Inserir(self,elem):
-
+        '''O elemnto que vai ser adicionado é colocado na última posição e depois é colocado\
+         na posição correta fazendo trocas'''
         if self.cantidad<self.MAX:
             self.fila[self.cantidad]=elem
             pos=len(self.fila)-1
@@ -39,6 +41,7 @@ class FilaPrioridad:
         else:
             print('Fila llena')
     def Remover(self):
+        '''Elimina o primeiro elemento e move a todos os elementos para o frente'''
         if self.FilaVacia():
             print('Fila Vacia')
         else:
@@ -48,8 +51,11 @@ class FilaPrioridad:
             return aux
 
     def Verificar(self):
+        '''Retorna o elemento na posição 0 que o de maior prioridade'''
         return self.fila[0]
 
+
+#Array desordenado
 class FilaPrioridadDesordenado:
     def __init__(self, MAX):
         self.fila = np.array([None]*MAX)
@@ -57,13 +63,14 @@ class FilaPrioridadDesordenado:
         self.cantidad = 0
 
     def FilaVacia(self):
+        '''Verifica se é vazia olhando se a quantidade é 0'''
         if self.cantidad == 0:
             return True
         else:
             return False
-#Arreglo desordenado
-    def InserirD(self, elem):
 
+    def InserirD(self, elem):
+        '''Sempre insere o elemento na última posição'''
         if self.cantidad < self.MAX:
             self.fila[self.cantidad] = elem
             self.cantidad+=1
@@ -76,6 +83,7 @@ class FilaPrioridadDesordenado:
             print('Fila llena')
 
     def BuscarElemMayorPrior(self):
+        '''Procura o maior elemento da fila comparando com um pivote'''
         if self.FilaVacia():
             print('Fila Vacia')
         elif len(self.fila)==1:
@@ -90,6 +98,8 @@ class FilaPrioridadDesordenado:
             return pos
 
     def RemoverD(self):
+        '''Procura o maior elemento elimina ele movendo para o frente os restantes elementos\
+        desde a posicão dele até o final'''
         if self.FilaVacia():
             print('Fila Vacia')
         else:
@@ -102,9 +112,11 @@ class FilaPrioridadDesordenado:
 
 
     def VerificarD(self):
+        '''Procura o elemento de maio prioridade e retorna ele'''
         pos=self.BuscarElemMayorPrior()
         return self.fila[pos]
 
+#Heap
 class FilaPrioridadH:
     def __init__(self, MAX):
         self.fila = np.array([None]*MAX)
@@ -112,12 +124,15 @@ class FilaPrioridadH:
         self.cantidad=0
 
     def FilaVacia(self):
+        '''Verifica se é vazia olhando se a quantidade é 0'''
         if self.cantidad == 0:
             return True
         else:
             return False
-#Heap
+
     def InsertarH(self,elem):
+        '''Inserta o lemento na ultima posição e coloca ele na posição correta segúm\
+        a propiedade do heap'''
         if self.FilaVacia():
             self.fila[0]=elem
 
@@ -136,6 +151,8 @@ class FilaPrioridadH:
         self.cantidad+=1
 
     def RemoverH(self):
+        '''Retorna o elemento da posição 0 e troca ele por o último elemento da fila\
+        ahi depois ele e colocado na posição correta segúm a propiedade do heap'''
         if self.FilaVacia():
             print('Fila Vacia')
         else:
@@ -156,9 +173,8 @@ class FilaPrioridadH:
             return x
 
     def VerificarH(self):
+        '''Retorna o elemento na posição 0 que o de maior prioridade'''
         return self.fila[0]
-
-
 
 
 if __name__=="__main__":
@@ -166,7 +182,8 @@ if __name__=="__main__":
     filaD=None
     filaOr=None
     filaheap=None
-    print('Inserção')
+    biblioheap = []
+    print('***  Inserção  ***')
     for i in range(5):
         tam=tam*10
         print("tamnho:: "+str(tam))
@@ -180,35 +197,31 @@ if __name__=="__main__":
             filaD.InserirD(random.randint(0,1000))
         timestamp = round(float(time()-time1),4)
         print("FilaD: %f" %timestamp)
-        #print (filaD.fila)
 
         time2 = time()
         for i in range(tam):
            filaOr.Inserir(random.randint(0,1000))
         timestamp2 = round(float(time() - time2),4)
         print("FilaOr: %f" %timestamp2)
-       # print(filaOr.fila)
 
         time3 = time()
         for i in range(tam):
             filaheap.InsertarH(random.randint(0,1000))
         timestamp3 = round(float(time() - time3),4)
         print("Heap: %f" %timestamp3)
-        #print(filaheap.fila)
         print("----------")
 
-    # filaheap = FilaPrioridadH(10)
-    # filaheap.InsertarH(25)
-    # filaheap.InsertarH(65)
-    # filaheap.InsertarH(2)
-    # filaheap.InsertarH(125)
-    # filaheap.InsertarH(84)
-    # print(filaheap.fila)
-    # filaheap.RemoverH()
-    # print(filaheap.fila)
+        time4 = time()
+        for i in range(tam):
+            heappush(biblioheap,random.randint(0,1000))
+        timestamp4 = round(float(time() - time4), 4)
+        print("Heapq: %f" % timestamp4)
+        print("----------")
+
+
+    print("***  Remoção  ***")
     cant =0
     for i in range(5):
-        #cant = random.randint(0,100)
         cant = cant+15
         print ('Remover: ' +str(cant)+' vezes')
         time1 = time()
@@ -229,6 +242,20 @@ if __name__=="__main__":
         timestamp2 = round(float(time() - time3), 4)
         print("Heap: %f" % timestamp2)
         print('-----------------')
+
+    print("***  Verificação  ***")
+    time1 = time()
+    filaD.VerificarD()
+    timestamp = round(float(time() - time1), 4)
+    print("FilaD: %f" % timestamp)
+    time2 = time()
+    filaOr.Verificar()
+    timestamp1 = round(float(time() - time2), 4)
+    print("FilaOr: %f" % timestamp1)
+    time3 = time()
+    filaheap.VerificarH()
+    timestamp2 = round(float(time() - time3), 4)
+    print("Heap: %f" % timestamp2)
 
         
 
