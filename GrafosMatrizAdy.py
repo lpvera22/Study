@@ -3,7 +3,7 @@ class GrafoMatrizAdy:
         self.matrizAdy=[]
 
     def SonAdyacentes(self,v1,v2):
-        if self.matrizAdy[v1][v2]! =0:
+        if self.matrizAdy[v1][v2] !=0:
             return True
         else:
             return False

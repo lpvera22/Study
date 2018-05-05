@@ -57,7 +57,7 @@ class GrafoListaAd:
 
 
 
-def Es
+
 #class Vertices:
     #def __init__(self, key):
         #self.key = key
