@@ -192,36 +192,26 @@ def GrafoListaAdy_Prim(grafo, origen):
 #a.Algoritmo de Floyd
 
 def GrafoListAdy_Floyd(grafo):
+    cn=len(grafo.listaAdy.keys())
+    x=grafo.listaAdy.copy()
+    dt=0
+
+    for i in range(cn):
+        for j in range(len(x[i].value())):
+            if x[i].value()==x[j]:
+                x[j]=0
+    for k in range(cn):
+        for i in range(cn):
+            for j in range(cn):
+                #int dt = path[i][k] + path[k][j]
+                dt=x[i][k]+x[k][j]
+                if(x[i][j] > dt):
+                    x[i][j] = dt
+    return x
 
 
-    distances=[]
 
-    for i in range(len(grafo.listaAdy.keys())) :
-        dict_i = {}
-        for j in range(len(grafo.listaAdy.keys())):
-            if grafo.listaAdy.keys()[i] == grafo.listaAdy.keys()[j]:
-                dict_i[j] = 0
-                continue
-            try:
 
-                dict_i[j] =grafo.listaAdy[i][j]
-
-            except:
-                dict_i[j] = float("inf")
-        distances[i] = dict_i
-    print(distances)
-
-    for i in range(len(grafo.listaAdy.keys())):
-        for j in range(len(grafo.listaAdy.keys())):
-            for k in range(len(grafo.listaAdy.keys())):
-                ij = distances[i][j]
-                ik = distances[i][k]
-                kj = distances[k][j]
-
-                if ij > ik + kj:
-                    distances[i][j] = ik + kj
-
-    return distances
 
 #Matriz de incidência
 class MatrizIncidencia:
