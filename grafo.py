@@ -15,6 +15,8 @@ class GrafoMatrizAdya:
             for j in range(len(self.matrizAdya)):
                 print("%i" % self.matrizAdya[i][j]),
             print
+    def pesoarista(self,v1,v2):
+        return self.matrizAdya[v1][v2]
 
 
 #Metodo generar grafo randomico
@@ -87,6 +89,23 @@ def GrafoMatrizAy_Prim(grafo,origen):
         cola = sorted(cola, key=lambda e: e[2])
     print mst
     return mst
+#3)O caminho mais curto entre todos os pares de vértices :
+#a.Algoritmo de Floyd
+
+def GrafoMatrizAy_Floyd(grafo):
+
+    x=grafo.matrizAdya.copy()
+    cn=len(grafo.vertices)
+    dt=0
+    for i in range(cn):
+        x[i][i] = 0
+    for k in range(cn):
+        for i in range(cn):
+            for j in range(cn):
+                dt = x[i][k] + x[k][j]
+                if (x[i][j] > dt):
+                    x[i][j] = dt
+    return x
 
 
 #Lista de adjacência
@@ -169,6 +188,40 @@ def GrafoListaAdy_Prim(grafo, origen):
         cola = sorted(cola, key=lambda e: e[2])
     print mst
     return mst
+#3)O caminho mais curto entre todos os pares de vértices :
+#a.Algoritmo de Floyd
+
+def GrafoListAdy_Floyd(grafo):
+
+
+    distances=[]
+
+    for i in range(len(grafo.listaAdy.keys())) :
+        dict_i = {}
+        for j in range(len(grafo.listaAdy.keys())):
+            if grafo.listaAdy.keys()[i] == grafo.listaAdy.keys()[j]:
+                dict_i[j] = 0
+                continue
+            try:
+
+                dict_i[j] =grafo.listaAdy[i][j]
+
+            except:
+                dict_i[j] = float("inf")
+        distances[i] = dict_i
+    print(distances)
+
+    for i in range(len(grafo.listaAdy.keys())):
+        for j in range(len(grafo.listaAdy.keys())):
+            for k in range(len(grafo.listaAdy.keys())):
+                ij = distances[i][j]
+                ik = distances[i][k]
+                kj = distances[k][j]
+
+                if ij > ik + kj:
+                    distances[i][j] = ik + kj
+
+    return distances
 
 #Matriz de incidência
 class MatrizIncidencia:
@@ -279,7 +332,21 @@ def DrawGraph(grafo,prim):
     nx.draw_networkx(graph,pos)
     nx.draw_networkx_edge_labels(graph,pos,edge_labels=labels)
     nx.draw_networkx_edges(graph,pos,edgelist=l_prim,width=3,edge_color='b')
+
     plt.show()
+
+def GrafoMatrizInci_Floyd(grafo):
+
+    for i in range(len(grafo.vertices)):
+        dict_i = {}
+        for j in range(len(grafo.vertices)):
+            if grafo.vertices[i] == grafo.vertices[j]:
+                dict_i[j] = 0
+                continue
+            try:
+                dict_i[j] = grafo.[i][j]
+
+
 
 if __name__=='__main__':
     vert=int(input('Insere a quantidade de vertices '))
