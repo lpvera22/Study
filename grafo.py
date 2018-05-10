@@ -241,6 +241,13 @@ class MatrizIncidencia:
                     passo +=1  
                        
         print self.matriz_inci
+    def pesoarista(self,v1,v2):
+        n=len(self.vertices)
+        peso=0
+        for i in range(len(self.m)):
+            if self.matriz_inci[i][v1]!=0 and self.matriz_inci[i][v2]!=0:
+                peso=self.matriz_inci[i][n+1]
+        return peso
     
     def GenGrafo(self,vert, edges, min_weight=1, max_weight=100):
         if edges > ((vert-1) * (vert )) // 2:
@@ -327,14 +334,33 @@ def DrawGraph(grafo,prim):
 
 def GrafoMatrizInci_Floyd(grafo):
 
-    for i in range(len(grafo.vertices)):
-        dict_i = {}
-        for j in range(len(grafo.vertices)):
-            if grafo.vertices[i] == grafo.vertices[j]:
-                dict_i[j] = 0
-                continue
-            try:
-                dict_i[j] = grafo.[i][j]
+    cn=len(grafo.vertices)
+    ca=len(grafo.m)
+    x=[[]]
+    dt=0
+    for i in range(ca):
+        for j in range(cn):
+            if grafo.matriz_inci[i][j]!=0:
+                cont=cont+1
+        if cont==1:
+            x[i][i]=0
+    for k in range(cn):
+        for i in range(cn):
+            for j in range(ca):
+                dt=grafo.pesoarista(grafo.vertices[i],grafo.vertices[k])+grafo.pesoarista(grafo.vertices[k],grafo.vertices[j])
+                if grafo.pesoarista(grafo.vertices[i],grafo.vertices[j])>dt:
+                    grafo.pesoarista(grafo.vertices[i],grafo.vertices[j]) =dt
+
+
+
+
+
+
+
+
+
+
+
 
 
 
