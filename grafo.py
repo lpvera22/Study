@@ -111,7 +111,7 @@ def GrafoMatrizAy_Prim(grafo,origen):
             if grafo.matrizAdya[u[1]][i]!=0 and grafo.vertices[i] not in visited :
                 cola.append((u[1],i,grafo.matrizAdya[u[1]][i]))
         cola = sorted(cola, key=lambda e: e[2])
-    print mst
+    print(mst)
     return mst
 
 '''2) Os caminhos mais curtos a partir de um vértice v até todos os outros vértices : 
@@ -304,14 +304,14 @@ def GrafoListaAdy_Prim(grafo, origen):
 
     cola.append((origen,origen,0))
 
-    #print cola
+
 
     visited = [origen]
-    print visited
+    print (visited)
     mst = []
     while (len(cola) != 0):
         u = cola.pop(0)
-        print u
+        print (u)
         if u[1] not in visited:
             visited.append(u[1])
             mst.append(u)
@@ -320,7 +320,7 @@ def GrafoListaAdy_Prim(grafo, origen):
             if i[0] not in visited:
                 cola.append((u[1], i[0], i[1]))
         cola = sorted(cola, key=lambda e: e[2])
-    print mst
+    print (mst)
     return mst
 
 def GrafoListaAdya_Dikstra(grafo,origen):
@@ -350,12 +350,12 @@ def GrafoListaAdya_Dikstra(grafo,origen):
                 list_aux.append((ady[i], distancia[ady[i]]))
                 list_aux.sort(key=lambda x: x[1])
 
-    return padre, distancia
+    return (padre, distancia)
 
 
 def GrafoListAdy_Floyd(grafo):
     cn=len(grafo.listaAdy.keys())
-    print grafo.listaAdy
+    print (grafo.listaAdy)
     x = [[float('inf')]*cn for i in range(cn)]
     dt=0
 
@@ -365,7 +365,7 @@ def GrafoListAdy_Floyd(grafo):
             pos_j = grafo.listaAdy.keys().index(j[0])
             x[pos_i][pos_i] = 0
             x[pos_i][pos_j] = j[1]
-    print x
+    print (x)
     for k in range(cn):
         for i in range(cn):
             for j in range(cn):
@@ -377,23 +377,23 @@ def GrafoListAdy_Floyd(grafo):
     return x
 
 def GrafoListaAdy_Kruskal(grafo):
+    pass
 
 
 
 
 
-
-#Matriz de incidência
+ #Matriz de incidência
 
 class MatrizIncidencia:
     def __init__(self, vert,edges):
         self.vertices,m=self.GenGrafo(vert,edges)
         for i in m:
             for j in i:
-                print j,
-            print
+                print (j),
+            print()
 		
-        print
+        print()
         
         arestas = 0
         for i in range(len(m)):
@@ -411,7 +411,7 @@ class MatrizIncidencia:
                     self.matriz_inci[j][passo]=1
                     passo +=1  
                        
-        print self.matriz_inci
+        print (self.matriz_inci)
     def pesoarista(self,v1,v2):
         n=len(self.vertices)
         peso=0
@@ -515,7 +515,7 @@ def GrafoMatrizInci_Prim(grafo, origen):
                 txt+=str(grafo.vertices[i])+' '
         mst.append((txt.split()[0],txt.split()[1],l_s[count]))
         count+=1
-    print mst
+    print (mst)
     return mst
 
 def GrafoMatrizInci_Dikstra(grafo,origen):
@@ -598,12 +598,12 @@ if __name__=='__main__':
     #f = GrafoListAdy_Floyd(grafo_lst)
     #grafo_lst.DrawGraph(prim)
 
-    print "**************************************************"
+    print ("**************************************************")
     grafo_inci = MatrizIncidencia(vert,ar)
     prim = GrafoMatrizInci_Prim(grafo_inci,1)
     f =GrafoMatrizInci_Floyd(grafo_inci)
     for i in f:
-        print i
+        print (i)
     grafo_inci.DrawGraph(prim)
 
 
