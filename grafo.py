@@ -65,9 +65,24 @@ class GrafoMatrizAdya:
 
             return (open_list, matriz)
 
+    def DrawGraph(self,prim):
+        l_prim=[i[:2] for i in prim]
+        graph = nx.Graph()
+        plt.axis('off')
+        for i in range(len(self.vertices)):
+            for j in range(len(self.vertices)):
+                if(self.matrizAdya[i][j] != 0):
+                    graph.add_edge(self.vertices[i],self.vertices[j],peso=self.matrizAdya[i][j])
+        pos=nx.spring_layout(graph)
+        labels = nx.get_edge_attributes(graph,'peso') 
+        nx.draw_networkx(graph,pos)
+        nx.draw_networkx_edge_labels(graph,pos,edge_labels=labels)
+        nx.draw_networkx_edges(graph,pos,edgelist=l_prim,width=3,edge_color='b')
+
+        plt.show()
+
     #1) Árvore geradora mínima:
     #a. Algoritmo de Prim
-
 
 def GrafoMatrizAy_Prim(grafo,origen):
     num_vert = len(grafo.vertices)
@@ -89,19 +104,26 @@ def GrafoMatrizAy_Prim(grafo,origen):
         cola = sorted(cola, key=lambda e: e[2])
     print mst
     return mst
+
+
 #3)O caminho mais curto entre todos os pares de vértices :
 #a.Algoritmo de Floyd
 
 def GrafoMatrizAy_Floyd(grafo):
-
-    x=grafo.matrizAdya.copy()
     cn=len(grafo.vertices)
-    dt=0
+    x = [[float('inf')]*cn for i in range(cn)]
     for i in range(cn):
-        x[i][i] = 0
+        for j in range(cn):
+            if i == j:
+                x[i][j] = 0
+            elif grafo.matrizAdya[i][j] != 0:
+                x[i][j] = grafo.matrizAdya[i][j]
+    dt=0
     for k in range(cn):
         for i in range(cn):
             for j in range(cn):
+                #print ("k: %d, i: %d , j: %d" %(k,i,j))
+                #print x[i][k]
                 dt = x[i][k] + x[k][j]
                 if (x[i][j] > dt):
                     x[i][j] = dt
@@ -163,6 +185,21 @@ class GrafoListaAdy:
 
         return (open_list, matriz)
 
+    def DrawGraph(self,prim):
+        l_prim=[i[:2] for i in prim]
+        graph = nx.Graph()
+        plt.axis('off')
+        for i in self.listaAdy.keys():
+            for j in self.listaAdy[i]:
+                graph.add_edge(i,j[0],peso=j[1])
+        pos=nx.spring_layout(graph)
+        labels = nx.get_edge_attributes(graph,'peso') 
+        nx.draw_networkx(graph,pos)
+        nx.draw_networkx_edge_labels(graph,pos,edge_labels=labels)
+        nx.draw_networkx_edges(graph,pos,edgelist=l_prim,width=3,edge_color='b')
+
+        plt.show()
+
 def GrafoListaAdy_Prim(grafo, origen):
     #print grafo.listaAdy
     num_vert = len(grafo.listaAdy.keys())
@@ -193,18 +230,23 @@ def GrafoListaAdy_Prim(grafo, origen):
 
 def GrafoListAdy_Floyd(grafo):
     cn=len(grafo.listaAdy.keys())
-    x=grafo.listaAdy.copy()
+    print grafo.listaAdy
+    x = [[float('inf')]*cn for i in range(cn)]
     dt=0
 
-    for i in range(cn):
-        for j in range(len(x[i].value())):
-            if x[i].value()==x[j]:
-                x[j]=0
+    for i in grafo.listaAdy.keys():
+        for j in grafo.listaAdy[i]:
+            pos_i = grafo.listaAdy.keys().index(i)
+            pos_j = grafo.listaAdy.keys().index(j[0])
+            x[pos_i][pos_i] = 0
+            x[pos_i][pos_j] = j[1]
+    print x
     for k in range(cn):
         for i in range(cn):
             for j in range(cn):
                 #int dt = path[i][k] + path[k][j]
                 dt=x[i][k]+x[k][j]
+                
                 if(x[i][j] > dt):
                     x[i][j] = dt
     return x
@@ -291,6 +333,30 @@ class MatrizIncidencia:
 
         return (open_list, matriz)
 
+    def DrawGraph(self,prim):
+        l_prim=[i[:2] for i in prim]
+        graph = nx.Graph()
+        plt.axis('off')
+        cn=len(self.vertices)
+        ca=len(self.matriz_inci[0])
+
+        for i in range(ca):
+            txt =""
+        #print("i: %d" %i)
+            for j in range(cn):
+                #print("j: %d" %j)
+                if self.matriz_inci[j][i]!=0:
+                   txt+=str(j)+" "
+            graph.add_edge(txt.split()[0],txt.split()[1],peso=self.matriz_inci[cn][i])
+
+        pos=nx.spring_layout(graph)
+        labels = nx.get_edge_attributes(graph,'peso') 
+        nx.draw_networkx(graph,pos)
+        nx.draw_networkx_edge_labels(graph,pos,edge_labels=labels)
+        nx.draw_networkx_edges(graph,pos,edgelist=l_prim,width=3,edge_color='b')
+
+        plt.show()
+
 def GrafoMatrizInci_Prim(grafo, origen):
     non_visited=grafo.vertices[:]
 
@@ -306,60 +372,43 @@ def GrafoMatrizInci_Prim(grafo, origen):
                 if grafo.vertices[i] in non_visited:
                     non_visited.remove(grafo.vertices[i])
                 txt+=str(grafo.vertices[i])+' '
-                #else:
-                 #   txt+=str(grafo.vertices[i])+' '
-        print txt
         mst.append((txt.split()[0],txt.split()[1],l_s[count]))
         count+=1
     print mst
     return mst
          
-def DrawGraph(grafo,prim):
-    l_prim=[i[:2] for i in prim]
-    graph = nx.Graph()
-    plt.axis('off')
-    #graph.add_nodes_from(grafo.vertices)
-    for i in range(len(grafo.vertices)):
-        for j in range(len(grafo.vertices)):
-            if(grafo.matrizAdya[i][j] != 0):
-                graph.add_edge(grafo.vertices[i],grafo.vertices[j],peso=grafo.matrizAdya[i][j])
-                #pass
-    pos=nx.spring_layout(graph)
-    labels = nx.get_edge_attributes(graph,'peso') 
-    nx.draw_networkx(graph,pos)
-    nx.draw_networkx_edge_labels(graph,pos,edge_labels=labels)
-    nx.draw_networkx_edges(graph,pos,edgelist=l_prim,width=3,edge_color='b')
-
-    plt.show()
-
 def GrafoMatrizInci_Floyd(grafo):
-
     cn=len(grafo.vertices)
-    ca=len(grafo.m)
-    x=[[]]
+    x = [[float('inf')]*cn for i in range(cn)]	
+    ca=len(grafo.matriz_inci[0])
+    
     dt=0
+    
     for i in range(ca):
+        txt =""
+        #print("i: %d" %i)
         for j in range(cn):
-            if grafo.matriz_inci[i][j]!=0:
-                cont=cont+1
-        if cont==1:
-            x[i][i]=0
+            #print("j: %d" %j)
+            if grafo.matriz_inci[j][i]!=0:
+               txt+=str(j)+" "
+               #print ("valor: %d" % grafo.matriz_inci[j][i])
+        #print "----"
+            x[j][j]=0
+        #print txt
+        #print grafo.matriz_inci[cn]
+        x[int(txt.split()[0])][int(txt.split()[1])] = grafo.matriz_inci[cn][i]	
+        x[int(txt.split()[1])][int(txt.split()[0])] = grafo.matriz_inci[cn][i] 
+
+    print x
     for k in range(cn):
         for i in range(cn):
-            for j in range(ca):
-                dt=grafo.pesoarista(grafo.vertices[i],grafo.vertices[k])+grafo.pesoarista(grafo.vertices[k],grafo.vertices[j])
-                if grafo.pesoarista(grafo.vertices[i],grafo.vertices[j])>dt:
-                    grafo.pesoarista(grafo.vertices[i],grafo.vertices[j]) =dt
-
-
-
-
-
-
-
-
-
-
+            for j in range(cn):
+                #int dt = path[i][k] + path[k][j]
+                dt=x[i][k]+x[k][j]
+                
+                if(x[i][j] > dt):
+                    x[i][j] = dt
+    return x
 
 
 
@@ -367,18 +416,25 @@ def GrafoMatrizInci_Floyd(grafo):
 if __name__=='__main__':
     vert=int(input('Insere a quantidade de vertices '))
     ar = int(input('Insere a quantidade de arestas '))
-    grafo=GrafoMatrizAdya(vert,ar)
-    grafo.printMatrix()
-    print grafo.vertices
-    prim=GrafoMatrizAy_Prim(grafo,1)
-    DrawGraph(grafo,prim)
+    #grafo=GrafoMatrizAdya(vert,ar)
+    #grafo.printMatrix()
+    #print grafo.vertices
+    #prim=GrafoMatrizAy_Prim(grafo,1)
+    #grafo.DrawGraph(prim)
 
-
+    #print "*************************************************"
     #grafo_lst = GrafoListaAdy(vert,ar)
-    #GrafoListaAdy_Prim(grafo_lst,1)
+    #prim = GrafoListaAdy_Prim(grafo_lst,1)
+    #f = GrafoListAdy_Floyd(grafo_lst)
+    #grafo_lst.DrawGraph(prim)
 
-    #grafo_inci = MatrizIncidencia(vert,ar)
-    #GrafoMatrizInci_Prim(grafo_inci,1)
+    print "**************************************************"
+    grafo_inci = MatrizIncidencia(vert,ar)
+    prim = GrafoMatrizInci_Prim(grafo_inci,1)
+    f =GrafoMatrizInci_Floyd(grafo_inci)
+    for i in f:
+        print i
+    grafo_inci.DrawGraph(prim)
 
 
 
