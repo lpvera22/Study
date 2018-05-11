@@ -399,7 +399,6 @@ def GrafoMatrizInci_Floyd(grafo):
         x[int(txt.split()[0])][int(txt.split()[1])] = grafo.matriz_inci[cn][i]	
         x[int(txt.split()[1])][int(txt.split()[0])] = grafo.matriz_inci[cn][i] 
 
-    print x
     for k in range(cn):
         for i in range(cn):
             for j in range(cn):
