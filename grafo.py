@@ -17,6 +17,15 @@ class GrafoMatrizAdya:
             print
     def pesoarista(self,v1,v2):
         return self.matrizAdya[v1][v2]
+    def vertadyac(self,v1):
+        ady=[]
+        for i in range(len(self.vertices)):
+            if self.matrizAdya[self.vertices.index(v1)][i]!=0:
+                ady.append(self.matrizAdya[self.vertices.index(v1)][i])
+        return ady
+
+
+
 
 
 #Metodo generar grafo randomico
@@ -105,6 +114,43 @@ def GrafoMatrizAy_Prim(grafo,origen):
     print mst
     return mst
 
+'''2) Os caminhos mais curtos a partir de um vértice v até todos os outros vértices : 
+          a.Algoritmo de Dijkstra'''
+
+
+def GrafoMatrizAy_Dijkstra(grafo,origen):
+    distancia=[float('inf')] *len(grafo.vertices)
+    visto=[False] *len(grafo.vertices)
+    padre=[None] *len(grafo.vertices)
+
+    distancia[grafo.vertices.index(origen)]=0
+    list_aux=[]
+    list_aux.append((origen,distancia[grafo.vertices.index(origen)]))
+
+    while len(list_aux)!=0:
+        u=list_aux.pop(0)
+        visto[u[0]]=True
+        ady=grafo.vertadyac(u)
+        for i in range(len(ady)):
+            #si distancia[v] > distancia[u] + peso (u, v) hacer
+            if distancia[ady[i]]> distancia[u]+ grafo.pesoarista(u,ady[i]):
+
+                #distancia[v] = distancia[u] + peso (u, v)
+                distancia[ady[i]]=distancia[u]+ grafo.pesoarista(u,ady[i])
+                #padre[v] = u
+                padre[ady[i]]=u
+
+                #adicionar(cola,(v, distancia[v])
+                list_aux.append((ady[i],distancia[ady[i]]))
+                list_aux.sort(key=lambda x: x[1])
+    return padre,distancia
+
+
+
+
+
+
+
 
 #3)O caminho mais curto entre todos os pares de vértices :
 #a.Algoritmo de Floyd
@@ -128,6 +174,8 @@ def GrafoMatrizAy_Floyd(grafo):
                 if (x[i][j] > dt):
                     x[i][j] = dt
     return x
+
+
 
 
 #Lista de adjacência
