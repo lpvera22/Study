@@ -223,10 +223,6 @@ def GrafoMatrizAy_Kruskal(grafo):
 
 
 
-
-
-
-
 #Lista de adjacência
 class GrafoListaAdy:
     def __init__(self,vert,edges):
@@ -357,7 +353,6 @@ def GrafoListaAdya_Dikstra(grafo,origen):
     return padre, distancia
 
 
-
 def GrafoListAdy_Floyd(grafo):
     cn=len(grafo.listaAdy.keys())
     print grafo.listaAdy
@@ -380,6 +375,9 @@ def GrafoListAdy_Floyd(grafo):
                 if(x[i][j] > dt):
                     x[i][j] = dt
     return x
+
+def GrafoListaAdy_Kruskal(grafo):
+
 
 
 
