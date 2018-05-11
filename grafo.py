@@ -146,11 +146,6 @@ def GrafoMatrizAy_Dijkstra(grafo,origen):
     return padre,distancia
 
 
-
-
-#3)O caminho mais curto entre todos os pares de vértices :
-#a.Algoritmo de Floyd
-
 def GrafoMatrizAy_Floyd(grafo):
     cn=len(grafo.vertices)
     x = [[float('inf')]*cn for i in range(cn)]
@@ -170,6 +165,64 @@ def GrafoMatrizAy_Floyd(grafo):
                 if (x[i][j] > dt):
                     x[i][j] = dt
     return x
+
+# Implementación del algoritmo Kruskal
+
+# Variables globales
+base = dict()
+ord = dict()
+
+# Función para generar conuntos
+def make_set(v):
+    base[v] = v
+    ord[v] = 0
+# Implementación de la función de búsqueda
+# de manera recursiva
+def find(v):
+    if base[v] != v:
+        base[v] = find(base[v])
+    return base[v]
+
+# Implementación de la unión de conjuntos
+def union(u, v):
+    v1 = find(u)
+    v2 = find(v)
+    if v1 != v2:
+        if ord[v1] > ord[v2]:
+            base[v2] = v1
+        else:
+            base[v1] = v2
+            if ord[v1] == ord[v2]:
+                ord[v2] += 1
+# Función principal del algoritmo Kruskal
+
+def GrafoMatrizAy_Kruskal(grafo):
+
+    # A = {conjunto vacío}
+    mst = set()
+
+
+
+    for v in grafo.vertices:
+        make_set(v)
+# Ordena la lista G.E en forma no decendente por su peso w
+    # En este caso usamos el ordenador dentro de python
+    edges = list(grafo.vertices)
+    edges.sort()
+
+    # Para toda arista(u,v) en G.E
+    for e in edges:
+        weight, u, v = e
+        # Si encontrar-conjunto(u) != encontrar-conjunto(v)
+        if find(u) != find(v):
+            # A = A union (u,v)
+            union(u, v)
+            # Union(u,v)
+            mst.add(e)
+    return mst
+
+
+
 
 
 
@@ -303,8 +356,7 @@ def GrafoListaAdya_Dikstra(grafo,origen):
 
     return padre, distancia
 
-#3)O caminho mais curto entre todos os pares de vértices :
-#a.Algoritmo de Floyd
+
 
 def GrafoListAdy_Floyd(grafo):
     cn=len(grafo.listaAdy.keys())
@@ -493,6 +545,7 @@ def GrafoMatrizInci_Dikstra(grafo,origen):
                 list_aux.append((ady[i], distancia[ady[i]]))
                 list_aux.sort(key=lambda x: x[1])
     return padre, distancia
+
 
 
 
