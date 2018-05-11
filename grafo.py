@@ -148,10 +148,6 @@ def GrafoMatrizAy_Dijkstra(grafo,origen):
 
 
 
-
-
-
-
 #3)O caminho mais curto entre todos os pares de vértices :
 #a.Algoritmo de Floyd
 
@@ -247,6 +243,10 @@ class GrafoListaAdy:
         nx.draw_networkx_edges(graph,pos,edgelist=l_prim,width=3,edge_color='b')
 
         plt.show()
+    def vertadyac(self,u):
+        return self.listaAdy[u]
+    def pesoarista(self,v1,v2):
+        return self.listaAdy[v1][v2]
 
 def GrafoListaAdy_Prim(grafo, origen):
     #print grafo.listaAdy
@@ -273,6 +273,43 @@ def GrafoListaAdy_Prim(grafo, origen):
         cola = sorted(cola, key=lambda e: e[2])
     print mst
     return mst
+
+def GrafoListaAdya_Dikstra(grafo,origen):
+
+    distancia=[float('inf')] *len(grafo.listaAdy.keys())
+    visto=[False] *len(grafo.listaAdy.keys())
+    padre=[None] *len(grafo.listaAdy.keys())
+
+    distancia[grafo.listaAdy.keys().index(origen)] = 0
+    list_aux = []
+    list_aux.append((origen, distancia[grafo.listaAdy.keys().index(origen)]))
+
+    while len(list_aux)!=0:
+        u=list_aux.pop(0)
+        visto[u[0]]=True
+        ady = grafo.vertadyac(u)
+        for i in range(len(ady)):
+            #si distancia[v] > distancia[u] + peso (u, v) hacer
+            if distancia[ady[i]]> distancia[u]+ grafo.pesoarista(u,ady[i]):
+
+                # distancia[v] = distancia[u] + peso (u, v)
+                distancia[ady[i]] = distancia[u] + grafo.pesoarista(u, ady[i])
+                # padre[v] = u
+                padre[ady[i]] = u
+
+                # adicionar(cola,(v, distancia[v])
+                list_aux.append((ady[i], distancia[ady[i]]))
+                list_aux.sort(key=lambda x: x[1])
+
+    return padre, distancia
+
+
+
+
+
+
+
+
 #3)O caminho mais curto entre todos os pares de vértices :
 #a.Algoritmo de Floyd
 
