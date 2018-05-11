@@ -303,13 +303,6 @@ def GrafoListaAdya_Dikstra(grafo,origen):
 
     return padre, distancia
 
-
-
-
-
-
-
-
 #3)O caminho mais curto entre todos os pares de vértices :
 #a.Algoritmo de Floyd
 
@@ -341,6 +334,7 @@ def GrafoListAdy_Floyd(grafo):
 
 
 #Matriz de incidência
+
 class MatrizIncidencia:
     def __init__(self, vert,edges):
         self.vertices,m=self.GenGrafo(vert,edges)
@@ -375,6 +369,18 @@ class MatrizIncidencia:
             if self.matriz_inci[i][v1]!=0 and self.matriz_inci[i][v2]!=0:
                 peso=self.matriz_inci[i][n+1]
         return peso
+    def vertadyac(self,v):
+        ady=[]
+        for i in range(len(self.matriz_inci[self.vertices.index(v)])):
+            if self.matriz_inci[self.vertices.index(v)][i]!=0:
+
+                aresta_pos=i
+
+                for j in range(len(self.vertices)):
+                    if self.matriz_inci[j][aresta_pos]!=0:
+                        ady.append(self.vertices[j])
+        return ady
+
     
     def GenGrafo(self,vert, edges, min_weight=1, max_weight=100):
         if edges > ((vert-1) * (vert )) // 2:
@@ -461,6 +467,35 @@ def GrafoMatrizInci_Prim(grafo, origen):
         count+=1
     print mst
     return mst
+
+def GrafoMatrizInci_Dikstra(grafo,origen):
+    distancia = [float('inf')] * len(grafo.vertices)
+    visto = [False] * len(grafo.vertices)
+    padre = [None] * len(grafo.vertices)
+
+    distancia[grafo.vertices.index(origen)] = 0
+    list_aux = []
+    list_aux.append((origen, distancia[grafo.vertices.index(origen)]))
+
+    while len(list_aux)!=0:
+        u=list_aux.pop(0)
+        visto[u[0]]=True
+        ady=grafo.vertadyac(u)
+        for i in range(len(ady)):
+            # si distancia[v] > distancia[u] + peso (u, v) hacer
+            if distancia[ady[i]] > distancia[u] + grafo.pesoarista(u, ady[i]):
+                # distancia[v] = distancia[u] + peso (u, v)
+                distancia[ady[i]] = distancia[u] + grafo.pesoarista(u, ady[i])
+                # padre[v] = u
+                padre[ady[i]] = u
+
+                # adicionar(cola,(v, distancia[v])
+                list_aux.append((ady[i], distancia[ady[i]]))
+                list_aux.sort(key=lambda x: x[1])
+    return padre, distancia
+
+
+
          
 def GrafoMatrizInci_Floyd(grafo):
     cn=len(grafo.vertices)
