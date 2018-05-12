@@ -171,11 +171,6 @@ def GrafoMatrizAy_Floyd(grafo):
 
 # Implementación del algoritmo Kruskal
 
-# Variables globales
-#base = dict()
-#ordi = dict()
-
-
 # Función para generar conuntos
 def make_set(v,base,ordi):
     base[v] = v
@@ -393,9 +388,6 @@ def GrafoListAdy_Floyd(grafo):
 
 # Implementación del algoritmo Kruskal
 
-# Variables globales
-base = dict()
-ordi = dict()
 # Función principal del algoritmo Kruskal
 
 def GrafoListaAdy_Kruskal(grafo):
