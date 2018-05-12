@@ -24,7 +24,7 @@ class GrafoMatrizAdya:
         for i in range(len(self.vertices)):
 
             if self.matrizAdya[self.vertices.index(v1)][i] != 0:
-                ady.append(self.matrizAdya[self.vertices.index(v1)][i])
+                ady.append(i)
         return ady
 
     # Metodo generar grafo randomico
@@ -120,32 +120,32 @@ def GrafoMatrizAy_Prim(grafo, origen):
 
 
 def GrafoMatrizAy_Dijkstra(grafo, origen):
-    distancia = [float('inf')] * len(grafo.vertices)
-    visto = [False] * len(grafo.vertices)
-    padre = [None] * len(grafo.vertices)
+    distancia=[float('inf')] *len(grafo.vertices)
+    visto=[False] *len(grafo.vertices)
+    padre=[None] *len(grafo.vertices)
 
-    distancia[grafo.vertices.index(origen)] = 0
-    list_aux = []
-    list_aux.append((origen, distancia[grafo.vertices.index(origen)]))
-   # print(list_aux)
-    while len(list_aux) != 0:
-        u = list_aux.pop(0)
-        visto[u[0]] = True
+    distancia[grafo.vertices.index(origen)]=0
+    list_aux=[]
+    list_aux.append((origen,distancia[grafo.vertices.index(origen)]))
 
-        ady = grafo.vertadyac(u[0])
-        print ady
+    while len(list_aux)!=0:
+        u=list_aux.pop(0)
+        visto[u[0]]=True
+        ady=grafo.vertadyac(u[0])
+	
         for i in range(len(ady)):
-            # si distancia[v] > distancia[u] + peso (u, v) hacer
-            if distancia[ady[i]] > distancia[u[0]] + grafo.pesoarista(u[0], ady[i]):
-                # distancia[v] = distancia[u] + peso (u, v)
-                distancia[ady[i]] = distancia[u[0]] + grafo.pesoarista(u[0], ady[i])
-                # padre[v] = u
-                padre[ady[i]] = u
+            #si distancia[v] > distancia[u] + peso (u, v) hacer
+            if distancia[ady[i]]> distancia[u[0]]+ grafo.pesoarista(u[0],ady[i]):
 
-                # adicionar(cola,(v, distancia[v])
-                list_aux.append((ady[i], distancia[ady[i]]))
+                #distancia[v] = distancia[u] + peso (u, v)
+                distancia[ady[i]]=distancia[u[0]]+ grafo.pesoarista(u[0],ady[i])
+                #padre[v] = u
+                padre[ady[i]]=u[0]
+
+                #adicionar(cola,(v, distancia[v])
+                list_aux.append((ady[i],distancia[ady[i]]))
                 list_aux.sort(key=lambda x: x[1])
-    return padre, distancia
+    return padre,distancia
 
 
 def GrafoMatrizAy_Floyd(grafo):
@@ -296,12 +296,13 @@ class GrafoListaAdy:
 
         plt.show()
 
-    def vertadyac(self, u):
-        return self.listaAdy[u]
-
-    def pesoarista(self, v1, v2):
-        return self.listaAdy[v1][v2]
-
+    def vertadyac(self,u):
+	return [i[0] for i in self.listaAdy[u]]
+    def pesoarista(self,v1,v2):
+	#dist=0
+	for i in self.listaAdy[v1]:
+            if i[0] == v2:
+               return i[1]
 
 def GrafoListaAdy_Prim(grafo, origen):
     # print grafo.listaAdy
@@ -311,11 +312,11 @@ def GrafoListaAdy_Prim(grafo, origen):
     cola.append((origen, origen, 0))
 
     visited = [origen]
-    print (visited)
+    #print (visited)
     mst = []
     while (len(cola) != 0):
         u = cola.pop(0)
-        print (u)
+        #print (u)
         if u[1] not in visited:
             visited.append(u[1])
             mst.append(u)
@@ -329,31 +330,34 @@ def GrafoListaAdy_Prim(grafo, origen):
 
 
 def GrafoListaAdya_Dikstra(grafo, origen):
-    distancia = [float('inf')] * len(grafo.listaAdy.keys())
-    visto = [False] * len(grafo.listaAdy.keys())
-    padre = [None] * len(grafo.listaAdy.keys())
+    distancia=[float('inf')] *len(grafo.listaAdy.keys())
+    visto=[False] *len(grafo.listaAdy.keys())
+    padre=[None] *len(grafo.listaAdy.keys())
 
     distancia[grafo.listaAdy.keys().index(origen)] = 0
     list_aux = []
     list_aux.append((origen, distancia[grafo.listaAdy.keys().index(origen)]))
 
-    while len(list_aux) != 0:
-        u = list_aux.pop(0)
-        visto[u[0]] = True
-        ady = grafo.vertadyac(u)
+    while len(list_aux)!=0:
+        u=list_aux.pop(0)
+        visto[u[0]]=True
+        ady = grafo.vertadyac(u[0])
+        print ady
+
         for i in range(len(ady)):
-            # si distancia[v] > distancia[u] + peso (u, v) hacer
-            if distancia[ady[i]] > distancia[u] + grafo.pesoarista(u, ady[i]):
+            #si distancia[v] > distancia[u] + peso (u, v) hacer
+            if distancia[ady[i]]> distancia[u[0]]+ grafo.pesoarista(u[0],ady[i]):
+
                 # distancia[v] = distancia[u] + peso (u, v)
-                distancia[ady[i]] = distancia[u] + grafo.pesoarista(u, ady[i])
+                distancia[ady[i]] = distancia[u[0]] + grafo.pesoarista(u[0], ady[i])
                 # padre[v] = u
-                padre[ady[i]] = u
+                padre[ady[i]] = u[0]
 
                 # adicionar(cola,(v, distancia[v])
                 list_aux.append((ady[i], distancia[ady[i]]))
                 list_aux.sort(key=lambda x: x[1])
 
-    return (padre, distancia)
+    return padre, distancia
 
 
 def GrafoListAdy_Floyd(grafo):
@@ -634,30 +638,39 @@ def GrafoMatrizInci_Kruskal(grafo):
     return mst
 
 if __name__ == '__main__':
-    vert = int(input('Insere a quantidade de vertices '))
+    vert=int(input('Insere a quantidade de vertices '))
     ar = int(input('Insere a quantidade de arestas '))
-    grafo=GrafoMatrizAdya(vert,ar)
-    grafo.printMatrix()
-    print grafo.vertices
-    prim=GrafoMatrizAy_Prim(grafo,1)
-    floyd = GrafoMatrizAy_Floyd(grafo)
-    for i in floyd:
-        print (i)
-    print("\n")
-    p,d =GrafoMatrizAy_Dijkstra(grafo,2)
-    print(p)
+    #grafo=GrafoMatrizAdya(vert,ar)
+    #grafo.printMatrix()
+    #print grafo.vertices
+    #prim=GrafoMatrizAy_Prim(grafo,1)
+    #floyd = GrafoMatrizAy_Floyd(grafo)
+    #for i in floyd:
+    #    print i
+    #p,d = GrafoMatrizAy_Dijkstra(grafo, 2)
+    #print "distancia: "+str(d)
+    #print "padre: "+str(p)
     #grafo.DrawGraph(prim)
 
-    # print "*************************************************"
-    # grafo_lst = GrafoListaAdy(vert,ar)
-    # prim = GrafoListaAdy_Prim(grafo_lst,1)
-    # f = GrafoListAdy_Floyd(grafo_lst)
-    # grafo_lst.DrawGraph(prim)
+    #print "*************************************************"
+    #grafo_lst = GrafoListaAdy(vert,ar)
+    #print grafo_lst			.listaAdy
+    #prim = GrafoListaAdy_Prim(grafo_lst,1)
+    #f = GrafoListAdy_Floyd(grafo_lst)
+    #for i in f:
+    #    print i
+    #p,d =GrafoListaAdya_Dikstra(grafo_lst, 2)
+    #print "distancia: "+str(d)
+    #print "padre: "+str(p)
+    #grafo_lst.DrawGraph(prim)
 
-    # print ("**************************************************")
-    # grafo_inci = MatrizIncidencia(vert, ar)
-    # prim = GrafoMatrizInci_Prim(grafo_inci, 1)
-    # f = GrafoMatrizInci_Floyd(grafo_inci)
-    # for i in f:
-    #     print (i)
-    # grafo_inci.DrawGraph(prim)
+    print "**************************************************"
+    grafo_inci = MatrizIncidencia(vert,ar)
+    prim = GrafoMatrizInci_Prim(grafo_inci,1)
+    f =GrafoMatrizInci_Floyd(grafo_inci)
+    for i in f:
+        print i
+    p,d =GrafoMatrizInci_Dikstra(grafo_inci, 2)
+    print "distancia: "+str(d)
+    print "padre: "+str(p)
+    grafo_inci.DrawGraph(prim)
