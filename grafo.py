@@ -22,6 +22,7 @@ class GrafoMatrizAdya:
     def vertadyac(self, v1):
         ady = []
         for i in range(len(self.vertices)):
+
             if self.matrizAdya[self.vertices.index(v1)][i] != 0:
                 ady.append(self.matrizAdya[self.vertices.index(v1)][i])
         return ady
@@ -126,16 +127,18 @@ def GrafoMatrizAy_Dijkstra(grafo, origen):
     distancia[grafo.vertices.index(origen)] = 0
     list_aux = []
     list_aux.append((origen, distancia[grafo.vertices.index(origen)]))
-
+   # print(list_aux)
     while len(list_aux) != 0:
         u = list_aux.pop(0)
         visto[u[0]] = True
-        ady = grafo.vertadyac(u)
+
+        ady = grafo.vertadyac(u[0])
+        print ady
         for i in range(len(ady)):
             # si distancia[v] > distancia[u] + peso (u, v) hacer
-            if distancia[ady[i]] > distancia[u] + grafo.pesoarista(u, ady[i]):
+            if distancia[ady[i]] > distancia[u[0]] + grafo.pesoarista(u[0], ady[i]):
                 # distancia[v] = distancia[u] + peso (u, v)
-                distancia[ady[i]] = distancia[u] + grafo.pesoarista(u, ady[i])
+                distancia[ady[i]] = distancia[u[0]] + grafo.pesoarista(u[0], ady[i])
                 # padre[v] = u
                 padre[ady[i]] = u
 
@@ -603,14 +606,47 @@ def GrafoMatrizInci_Floyd(grafo):
                     x[i][j] = dt
     return x
 
+# Implementación del algoritmo Kruskal
+
+# Variables globales
+base = dict()
+ord = dict()
+# Función principal del algoritmo Kruskal
+
+def GrafoMatrizInci_Kruskal(grafo):
+    # A = {conjunto vacío}
+    mst = set()
+    for v in grafo.listaAdy.keys():
+        make_set(v)
+    # Ordena la lista G.E en forma no decendente por su peso w
+    # En este caso usamos el ordenador dentro de python
+    edges = list(grafo.listaAdy.keys())
+    edges.sort()
+    # Para toda arista(u,v) en G.E
+    for e in edges:
+        weight, u, v = e
+        # Si encontrar-conjunto(u) != encontrar-conjunto(v)
+        if find(u) != find(v):
+            # A = A union (u,v)
+            union(u, v)
+            # Union(u,v)
+            mst.add(e)
+    return mst
+
 if __name__ == '__main__':
     vert = int(input('Insere a quantidade de vertices '))
     ar = int(input('Insere a quantidade de arestas '))
-    # grafo=GrafoMatrizAdya(vert,ar)
-    # grafo.printMatrix()
-    # print grafo.vertices
-    # prim=GrafoMatrizAy_Prim(grafo,1)
-    # grafo.DrawGraph(prim)
+    grafo=GrafoMatrizAdya(vert,ar)
+    grafo.printMatrix()
+    print grafo.vertices
+    prim=GrafoMatrizAy_Prim(grafo,1)
+    floyd = GrafoMatrizAy_Floyd(grafo)
+    for i in floyd:
+        print (i)
+    print("\n")
+    p,d =GrafoMatrizAy_Dijkstra(grafo,2)
+    print(p)
+    #grafo.DrawGraph(prim)
 
     # print "*************************************************"
     # grafo_lst = GrafoListaAdy(vert,ar)
@@ -618,10 +654,10 @@ if __name__ == '__main__':
     # f = GrafoListAdy_Floyd(grafo_lst)
     # grafo_lst.DrawGraph(prim)
 
-    print ("**************************************************")
-    grafo_inci = MatrizIncidencia(vert, ar)
-    prim = GrafoMatrizInci_Prim(grafo_inci, 1)
-    f = GrafoMatrizInci_Floyd(grafo_inci)
-    for i in f:
-        print (i)
+    # print ("**************************************************")
+    # grafo_inci = MatrizIncidencia(vert, ar)
+    # prim = GrafoMatrizInci_Prim(grafo_inci, 1)
+    # f = GrafoMatrizInci_Floyd(grafo_inci)
+    # for i in f:
+    #     print (i)
     # grafo_inci.DrawGraph(prim)
