@@ -111,7 +111,7 @@ def GrafoMatrizAy_Prim(grafo, origen):
             if grafo.matrizAdya[u[1]][i] != 0 and grafo.vertices[i] not in visited:
                 cola.append((u[1], i, grafo.matrizAdya[u[1]][i]))
         cola = sorted(cola, key=lambda e: e[2])
-    print(mst)
+    print("Prim: "+str(mst))
     return mst
 
 
@@ -172,59 +172,67 @@ def GrafoMatrizAy_Floyd(grafo):
 # Implementación del algoritmo Kruskal
 
 # Variables globales
-base = dict()
-ord = dict()
+#base = dict()
+#ordi = dict()
 
 
 # Función para generar conuntos
-def make_set(v):
+def make_set(v,base,ordi):
     base[v] = v
-    ord[v] = 0
+    ordi[v] = 0
 
 
 # Implementación de la función de búsqueda
 # de manera recursiva
-def find(v):
+def find(v,base):
     if base[v] != v:
-        base[v] = find(base[v])
+        base[v] = find(base[v],base)
     return base[v]
 
 
 # Implementación de la unión de conjuntos
-def union(u, v):
-    v1 = find(u)
-    v2 = find(v)
+def union(u, v,base,ordi):
+    v1 = find(u,base)
+    v2 = find(v,base)
     if v1 != v2:
-        if ord[v1] > ord[v2]:
+        if ordi[v1] > ordi[v2]:
             base[v2] = v1
         else:
             base[v1] = v2
-            if ord[v1] == ord[v2]:
-                ord[v2] += 1
+            if ordi[v1] == ordi[v2]:
+                ordi[v2] += 1
 
 
 # Función principal del algoritmo Kruskal
 
 def GrafoMatrizAy_Kruskal(grafo):
+    base = dict()
+    ordi = dict()
     # A = {conjunto vacío}
-    mst = set()
+    mst = []
 
     for v in grafo.vertices:
-        make_set(v)
+        make_set(v,base,ordi)
     # Ordena la lista G.E en forma no decendente por su peso w
     # En este caso usamos el ordenador dentro de python
-    edges = list(grafo.vertices)
-    edges.sort()
+    edges=[]
+    for i in range(len(grafo.vertices)):
+        for j in range(len(grafo.vertices)):
+            if grafo.matrizAdya[i][j] !=0:
+                edges.append((grafo.vertices[i],grafo.vertices[j],grafo.matrizAdya[i][j]))
+    #print edges
+    edges.sort(key=lambda x: x[2])
 
     # Para toda arista(u,v) en G.E
     for e in edges:
-        weight, u, v = e
+        #print e
+        u, v,weight = e
         # Si encontrar-conjunto(u) != encontrar-conjunto(v)
-        if find(u) != find(v):
+        if find(u,base) != find(v,base):
             # A = A union (u,v)
-            union(u, v)
+            union(u, v,base,ordi)
             # Union(u,v)
-            mst.add(e)
+            mst.append(e)
     return mst
 
 
@@ -325,7 +333,7 @@ def GrafoListaAdy_Prim(grafo, origen):
             if i[0] not in visited:
                 cola.append((u[1], i[0], i[1]))
         cola = sorted(cola, key=lambda e: e[2])
-    print (mst)
+    print ("Prim: "+str(mst))
     return mst
 
 
@@ -342,7 +350,7 @@ def GrafoListaAdya_Dijkstra(grafo, origen):
         u=list_aux.pop(0)
         visto[u[0]]=True
         ady = grafo.vertadyac(u[0])
-        print ady
+        #print ady
 
         for i in range(len(ady)):
             #si distancia[v] > distancia[u] + peso (u, v) hacer
@@ -362,7 +370,7 @@ def GrafoListaAdya_Dijkstra(grafo, origen):
 
 def GrafoListAdy_Floyd(grafo):
     cn = len(grafo.listaAdy.keys())
-    print (grafo.listaAdy)
+    #print (grafo.listaAdy)
     x = [[float('inf')] * cn for i in range(cn)]
     dt = 0
 
@@ -372,7 +380,7 @@ def GrafoListAdy_Floyd(grafo):
             pos_j = grafo.listaAdy.keys().index(j[0])
             x[pos_i][pos_i] = 0
             x[pos_i][pos_j] = j[1]
-    print (x)
+    #print (x)
     for k in range(cn):
         for i in range(cn):
             for j in range(cn):
@@ -387,27 +395,34 @@ def GrafoListAdy_Floyd(grafo):
 
 # Variables globales
 base = dict()
-ord = dict()
+ordi = dict()
 # Función principal del algoritmo Kruskal
 
 def GrafoListaAdy_Kruskal(grafo):
+    base = dict()
+    ordi = dict()
     # A = {conjunto vacío}
-    mst = set()
+    mst = []
     for v in grafo.listaAdy.keys():
-        make_set(v)
+        make_set(v,base,ordi)
     # Ordena la lista G.E en forma no decendente por su peso w
     # En este caso usamos el ordenador dentro de python
-    edges = list(grafo.listaAdy.keys())
-    edges.sort()
+    edges=[]
+    for v1,adj in grafo.listaAdy.items():
+        for v2, weight in adj:
+            edges.append((v1,v2, weight))
+    #edges = list(grafo.listaAdy.keys())
+    edges.sort(key=lambda x: x[2])
+    #print edges
     # Para toda arista(u,v) en G.E
     for e in edges:
-        weight, u, v = e
+        u, v, weight= e
         # Si encontrar-conjunto(u) != encontrar-conjunto(v)
-        if find(u) != find(v):
+        if find(u,base) != find(v,base):
             # A = A union (u,v)
-            union(u, v)
+            union(u, v,base,ordi)
             # Union(u,v)
-            mst.add(e)
+            mst.append(e)
     return mst
 
 
@@ -614,29 +629,36 @@ def GrafoMatrizInci_Floyd(grafo):
 
 # Implementación del algoritmo Kruskal
 
-# Variables globales
-base = dict()
-ord = dict()
 # Función principal del algoritmo Kruskal
 
 def GrafoMatrizInci_Kruskal(grafo):
+    base = dict()
+    ordi = dict()
     # A = {conjunto vacío}
-    mst = set()
-    for v in grafo.listaAdy.keys():
-        make_set(v)
+    mst = []
+    for v in grafo.vertices:
+        make_set(v,base,ordi)
     # Ordena la lista G.E en forma no decendente por su peso w
     # En este caso usamos el ordenador dentro de python
-    edges = list(grafo.listaAdy.keys())
-    edges.sort()
+    edges=[]
+    for i in range(len(grafo.matriz_inci[0])):
+        txt=''
+        for j in range(len(grafo.vertices)):
+            if grafo.matriz_inci[j][i] == 1:
+                 txt += str(grafo.vertices[j]) + ' '
+        #print txt
+        edges.append((int(txt.split()[0]),int(txt.split()[1]),grafo.matriz_inci[-1][i]))
+    edges.sort(key=lambda x: x[2])
+    print(edges)
     # Para toda arista(u,v) en G.E
     for e in edges:
-        weight, u, v = e
+        u, v,weight = e
         # Si encontrar-conjunto(u) != encontrar-conjunto(v)
-        if find(u) != find(v):
+        if find(u,base) != find(v,base):
             # A = A union (u,v)
-            union(u, v)
+            union(u, v,base,ordi)
             # Union(u,v)
-            mst.add(e)
+            mst.append(e)
     return mst
 
 if __name__ == '__main__':
@@ -652,6 +674,8 @@ if __name__ == '__main__':
     #p,d = GrafoMatrizAy_Dijkstra(grafo, 2)
     #print "distancia: "+str(d)
     #print "padre: "+str(p)
+    #mst = GrafoMatrizAy_Kruskal(grafo)
+    #print "kruskal: "+str(mst)
     #grafo.DrawGraph(prim)
 
     #print "*************************************************"
@@ -664,6 +688,8 @@ if __name__ == '__main__':
     #p,d =GrafoListaAdya_Dijkstra(grafo_lst, 2)
     #print "distancia: "+str(d)
     #print "padre: "+str(p)
+    #mst = GrafoListaAdy_Kruskal(grafo_lst)
+    #print "kruskal: "+str(mst)
     #grafo_lst.DrawGraph(prim)
 
     print "**************************************************"
@@ -675,4 +701,6 @@ if __name__ == '__main__':
     p,d =GrafoMatrizInci_Dijkstra(grafo_inci, 2)
     print "distancia: "+str(d)
     print "padre: "+str(p)
+    mst = GrafoMatrizInci_Kruskal(grafo_inci)
+    print "kruskal: "+str(mst)
     grafo_inci.DrawGraph(prim)
