@@ -1,7 +1,7 @@
 # *-* encoding:UTF-8 *-*
 import numpy as np
 from random import *
-# import networkx as nx
+import networkx as nx
 import matplotlib.pyplot as plt
 
 
@@ -329,7 +329,7 @@ def GrafoListaAdy_Prim(grafo, origen):
     return mst
 
 
-def GrafoListaAdya_Dikstra(grafo, origen):
+def GrafoListaAdya_Dijkstra(grafo, origen):
     distancia=[float('inf')] *len(grafo.listaAdy.keys())
     visto=[False] *len(grafo.listaAdy.keys())
     padre=[None] *len(grafo.listaAdy.keys())
@@ -422,9 +422,9 @@ class MatrizIncidencia:
         for i in m:
             for j in i:
                 print (j),
-            print()
+           
 
-        print()
+        print("\n")
 
         arestas = 0
         for i in range(len(m)):
@@ -445,11 +445,13 @@ class MatrizIncidencia:
         print (self.matriz_inci)
 
     def pesoarista(self, v1, v2):
-        n = len(self.vertices)
+        pos_v1= self.vertices.index(v1)
+        pos_v2= self.vertices.index(v2)
+        #n = len(self.vertices)
         peso = 0
-        for i in range(len(self.m)):
-            if self.matriz_inci[i][v1] != 0 and self.matriz_inci[i][v2] != 0:
-                peso = self.matriz_inci[i][n + 1]
+        for i in range(len(self.matriz_inci[0])):
+            if self.matriz_inci[pos_v1][i] != 0 and self.matriz_inci[pos_v2][i] != 0:
+                peso = self.matriz_inci[-1][i]
         return peso
 
     def vertadyac(self, v):
@@ -551,7 +553,7 @@ def GrafoMatrizInci_Prim(grafo, origen):
     return mst
 
 
-def GrafoMatrizInci_Dikstra(grafo, origen):
+def GrafoMatrizInci_Dijkstra(grafo, origen):
     distancia = [float('inf')] * len(grafo.vertices)
     visto = [False] * len(grafo.vertices)
     padre = [None] * len(grafo.vertices)
@@ -563,14 +565,14 @@ def GrafoMatrizInci_Dikstra(grafo, origen):
     while len(list_aux) != 0:
         u = list_aux.pop(0)
         visto[u[0]] = True
-        ady = grafo.vertadyac(u)
+        ady = grafo.vertadyac(u[0])
         for i in range(len(ady)):
             # si distancia[v] > distancia[u] + peso (u, v) hacer
-            if distancia[ady[i]] > distancia[u] + grafo.pesoarista(u, ady[i]):
+            if distancia[ady[i]] > distancia[u[0]] + grafo.pesoarista(u[0], ady[i]):
                 # distancia[v] = distancia[u] + peso (u, v)
-                distancia[ady[i]] = distancia[u] + grafo.pesoarista(u, ady[i])
+                distancia[ady[i]] = distancia[u[0]] + grafo.pesoarista(u[0], ady[i])
                 # padre[v] = u
-                padre[ady[i]] = u
+                padre[ady[i]] = u[0]
 
                 # adicionar(cola,(v, distancia[v])
                 list_aux.append((ady[i], distancia[ady[i]]))
@@ -659,7 +661,7 @@ if __name__ == '__main__':
     #f = GrafoListAdy_Floyd(grafo_lst)
     #for i in f:
     #    print i
-    #p,d =GrafoListaAdya_Dikstra(grafo_lst, 2)
+    #p,d =GrafoListaAdya_Dijkstra(grafo_lst, 2)
     #print "distancia: "+str(d)
     #print "padre: "+str(p)
     #grafo_lst.DrawGraph(prim)
@@ -670,7 +672,7 @@ if __name__ == '__main__':
     f =GrafoMatrizInci_Floyd(grafo_inci)
     for i in f:
         print i
-    p,d =GrafoMatrizInci_Dikstra(grafo_inci, 2)
+    p,d =GrafoMatrizInci_Dijkstra(grafo_inci, 2)
     print "distancia: "+str(d)
     print "padre: "+str(p)
     grafo_inci.DrawGraph(prim)
