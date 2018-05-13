@@ -3,10 +3,10 @@ import numpy as np
 from random import *
 graphic = True
 try:
-    
+
     import networkx as nx
     import matplotlib.pyplot as plt
-    
+
 except Exception as e:
     print e
     graphic = False
@@ -173,7 +173,7 @@ def GrafoMatrizAy_Prim(grafo, origen):
     return mst
 
 
-'''2) Os caminhos mais curtos a partir de um vértice v até todos os outros vértices : 
+'''2) Os caminhos mais curtos a partir de um vértice v até todos os outros vértices :
           a.Algoritmo de Dijkstra'''
 
 
@@ -190,7 +190,7 @@ def GrafoMatrizAy_Dijkstra(grafo, origen):
         u=list_aux.pop(0)
         visto[u[0]]=True
         ady=grafo.vertadyac(u[0])
-	
+
         for i in range(len(ady)):
             #si distancia[v] > distancia[u] + peso (u, v) hacer
             if distancia[ady[i]]> distancia[u[0]]+ grafo.pesoarista(u[0],ady[i]):
@@ -300,7 +300,7 @@ class GrafoListaAdy:
             for j in range(len(lst)):
                 if m[i][j] != 0:
                     self.listaAdy[lst[i]].append((j, m[i][j]))
-    
+
     def GenGrafo(self, vert, edges, min_weight=1, max_weight=100):
         if edges > vert * (vert - 1) // 2:
             print("Graph cannot be generated. Too many edges")
@@ -382,7 +382,7 @@ def GrafoListaAdy_Prim(grafo, origen):
             visited.append(u[1])
             mst.append(u)
         for i in grafo.listaAdy[u[1]]:
-            # print i
+        # print i
             if i[0] not in visited:
                 cola.append((u[1], i[0], i[1]))
         cola = sorted(cola, key=lambda e: e[2])
@@ -487,7 +487,7 @@ class MatrizIncidencia:
         for i in m:
             for j in i:
                 print (j),
-           
+
 
         print("\n")
 
@@ -600,22 +600,30 @@ class MatrizIncidencia:
 
 
 def GrafoMatrizInci_Prim(grafo, origen):
-    non_visited = grafo.vertices[:]
 
-    l = list(grafo.matriz_inci[-1])
-    l_s = sorted(list(grafo.matriz_inci[-1]))
-    count = 0
+    cola = []
+    cola.append((origen, origen, 0))
     mst = []
-    while len(non_visited) != 0:
-        pos = l.index(l_s[count])
-        txt = ''
-        for i in range(len(grafo.vertices)):
-            if grafo.matriz_inci[i][pos] == 1:
-                if grafo.vertices[i] in non_visited:
-                    non_visited.remove(grafo.vertices[i])
-                txt += str(grafo.vertices[i]) + ' '
-        mst.append((txt.split()[0], txt.split()[1], l_s[count]))
-        count += 1
+    visited = [origen]
+    #print (visited)
+    mst = []
+    while (len(cola) != 0):
+        u = cola.pop(0)
+
+        if u[1] not in visited:
+            visited.append(u[1])
+            mst.append(u)
+        pos_v1 = grafo.vertices.index(u[1])
+
+        for i in grafo.vertadyac(u[1]):
+        # print i
+            if i not in visited:
+                pos_v2 = grafo.vertices.index(i)
+                for j in range(len(grafo.matriz_inci[0])):
+                    # pass
+                    if grafo.matriz_inci[pos_v1][j] == grafo.matriz_inci[pos_v2][j] ==1:
+                        cola.append((u[1], i, grafo.matriz_inci[-1][j]))
+        cola = sorted(cola, key=lambda e: e[2])
     print ("Prim: "+str(mst))
     return mst
 
@@ -776,7 +784,7 @@ if __name__ == '__main__':
     p,d =GrafoMatrizInci_Dijkstra(grafo_inci, 2)
     print("Tempo do Dijkstra: %.4f \n" % (time()-time_ini_djk))
     print "distancia: "+str(d)
-    time_ini_k = time() 
+    time_ini_k = time()
     print "padre: "+str(p)
     mst = GrafoMatrizInci_Kruskal(grafo_inci)
     print("Tempo do Kruskal: %.4f \n" % (time()-time_ini_k))
