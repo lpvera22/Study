@@ -54,17 +54,14 @@ def GenGrafo(vert, edges, min_weight=1, max_weight=100):
 
                 num_edges += 1
 
-            # end = start = randint(0, vert - 1)
-            # while end == start:
-            #     end = randint(0, vert - 1)
+
 
             return (open_list, matriz)
 
 
 # Matriz de adjacência
 class GrafoMatrizAdya:
-    #def __init__(self, vert, aristas):
-    #    self.vertices, self.matrizAdya = self.GenGrafo(vert, aristas)
+
     def __init__(self,vert,matriz):
         self.vertices, self.matrizAdya = vert,matriz
 
@@ -125,9 +122,7 @@ class GrafoMatrizAdya:
 
                 num_edges += 1
 
-            # end = start = randint(0, vert - 1)
-            # while end == start:
-            #     end = randint(0, vert - 1)
+
 
             return (open_list, matriz)
 
@@ -152,23 +147,29 @@ class GrafoMatrizAdya:
 
 
 def GrafoMatrizAy_Prim(grafo, origen):
-    num_vert = len(grafo.vertices)
+
+    #definição da fila com prioridade
     cola = []
 
+    #se insere no procesamento o primeiro nodo
     pos = grafo.vertices.index(origen)
     cola.append((pos, pos, 0))
     visited = [grafo.vertices[pos]]
-    mst = []
+
+    mst = [] #lista para almacenar os resultados
+
+    #embora a fila não esteja vacia tiro u primer elemento, marco ele como visitado e adiciono na fila us vertices adyacentes a ele
     while (len(cola) != 0):
-        # print(cola)
+
         u = cola.pop(0)
         if grafo.vertices[u[1]] not in visited:
             visited.append(grafo.vertices[u[1]])
             mst.append(u)
-        for i in range(len(grafo.vertices)):
+
+        for i in range(len(grafo.vertices)):# percoro a matriz de adyacencia para pegar u peso da aresta que une os nodos
             if grafo.matrizAdya[u[1]][i] != 0 and grafo.vertices[i] not in visited:
                 cola.append((u[1], i, grafo.matrizAdya[u[1]][i]))
-        cola = sorted(cola, key=lambda e: e[2])
+        cola = sorted(cola, key=lambda e: e[2])#ordena fila segum peso de aresta
     print("Prim: "+str(mst))
     return mst
 
@@ -358,12 +359,12 @@ class GrafoListaAdy:
         plt.show()
 
     def vertadyac(self,u):
-	return [i[0] for i in self.listaAdy[u]]
+        return [i[0] for i in self.listaAdy[u]]
+
     def pesoarista(self,v1,v2):
-	#dist=0
-	for i in self.listaAdy[v1]:
+        for i in self.listaAdy[v1]:
             if i[0] == v2:
-               return i[1]
+                return i[1]
 
 def GrafoListaAdy_Prim(grafo, origen):
     # print grafo.listaAdy
