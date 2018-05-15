@@ -15,6 +15,7 @@ except Exception as e:
 
 from time import *
 
+#Metodo para gerar um grafo conexo
 def GenGrafo(vert, edges, min_weight=1, max_weight=100):
         if edges > vert * (vert - 1) // 2:
             print("Graph cannot be generated. Too many edges")
@@ -54,8 +55,6 @@ def GenGrafo(vert, edges, min_weight=1, max_weight=100):
 
                 num_edges += 1
 
-
-
             return (open_list, matriz)
 
 
@@ -65,7 +64,7 @@ class GrafoMatrizAdya:
     def __init__(self,vert,matriz):
         self.vertices, self.matrizAdya = vert,matriz
 
-    def printMatrix(self):
+    def printMatrix(self):#Metodo para imprimir a matriz de adjacência do grafo
         for i in range(len(self.matrizAdya)):
             for j in range(len(self.matrizAdya)):
                 print("%i" % self.matrizAdya[i][j]),
@@ -82,51 +81,8 @@ class GrafoMatrizAdya:
                 ady.append(i)
         return ady
 
-    # Metodo generar grafo randomico
-    def GenGrafo(self, vert, edges, min_weight=1, max_weight=100):
-        if edges > vert * (vert - 1) // 2:
-            print("Graph cannot be generated. Too many edges")
-            return None
-        else:
-            matriz = np.zeros((vert, vert), dtype=np.int)
-            degree = np.zeros(vert, dtype=np.int)
-            num_edges = 0
 
-            lst_vert = [i for i in range(vert)]
-
-            # shuffle(lst_vert)
-            open_list = [lst_vert.pop(0)]
-            while len(lst_vert) > 0 and num_edges < edges:
-                v1 = open_list[randint(0, len(open_list) - 1)]
-                v2 = lst_vert.pop(0)
-
-                degree[v1] += 1
-                degree[v2] += 1
-
-                matriz[v1][v2] = matriz[v2][v1] = randint(min_weight, max_weight)
-
-                num_edges += 1
-                open_list.append(v2)
-            while num_edges < edges:
-                v1 = v2 = randint(0, vert - 1)
-                while degree[v1] == vert - 1:
-                    v1 = v2 = randint(0, vert - 1)
-
-                while v2 == v1 or matriz[v1][v2] == True:
-                    v2 = randint(0, vert - 1)
-
-                matriz[v1][v2] = matriz[v2][v1] = randint(min_weight, max_weight)
-
-                degree[v1] += 1
-                degree[v2] += 1
-
-                num_edges += 1
-
-
-
-            return (open_list, matriz)
-
-    def DrawGraph(self, prim):
+    def DrawGraph(self, prim): #Metodo para apresentar grafo visualmente
         l_prim = [i[:2] for i in prim]
         graph = nx.Graph()
         plt.axis('off')
@@ -144,8 +100,6 @@ class GrafoMatrizAdya:
 
     # 1) Árvore geradora mínima:
     # a. Algoritmo de Prim
-
-
 def GrafoMatrizAy_Prim(grafo, origen):
 
     #definição da fila com prioridade
@@ -220,8 +174,6 @@ def GrafoMatrizAy_Floyd(grafo):
     for k in range(cn):
         for i in range(cn):
             for j in range(cn):
-                # print ("k: %d, i: %d , j: %d" %(k,i,j))
-                # print x[i][k]
                 dt = x[i][k] + x[k][j]
                 if (x[i][j] > dt):
                     x[i][j] = dt
@@ -279,7 +231,7 @@ def GrafoMatrizAy_Kruskal(grafo):
 
     # Para toda arista(u,v) en G.E
     for e in edges:
-        #print e
+
         u, v,weight = e
         # Si encontrar-conjunto(u) != encontrar-conjunto(v)
         if find(u,base) != find(v,base):
@@ -293,55 +245,16 @@ def GrafoMatrizAy_Kruskal(grafo):
 # Lista de adjacência
 class GrafoListaAdy:
     def __init__(self,vert,matriz):
-        self.listaAdy = {}
+        self.listaAdy = {}#diccionario que representa e grafo  as chaves são os nos e os valores são a lista dos adyacentes
         lst, m = vert,matriz
 
-        for i in range(len(lst)):
+        for i in range(len(lst)):#para transformar  a matriz de adyacencia para o diccionarios
             self.listaAdy[lst[i]] = []
             for j in range(len(lst)):
                 if m[i][j] != 0:
                     self.listaAdy[lst[i]].append((j, m[i][j]))
 
-    def GenGrafo(self, vert, edges, min_weight=1, max_weight=100):
-        if edges > vert * (vert - 1) // 2:
-            print("Graph cannot be generated. Too many edges")
-            return None
-        else:
-            matriz = np.zeros((vert, vert), dtype=np.int)
-            degree = np.zeros(vert, dtype=np.int)
-            num_edges = 0
 
-            lst_vert = [i for i in range(vert)]
-
-            # shuffle(lst_vert)
-            open_list = [lst_vert.pop(0)]
-            while len(lst_vert) > 0 and num_edges < edges:
-                v1 = open_list[randint(0, len(open_list) - 1)]
-                v2 = lst_vert.pop(0)
-
-                degree[v1] += 1
-                degree[v2] += 1
-
-                matriz[v1][v2] = matriz[v2][v1] = randint(min_weight, max_weight)
-
-                num_edges += 1
-                open_list.append(v2)
-            while num_edges < edges:
-                v1 = v2 = randint(0, vert - 1)
-                while degree[v1] == vert - 1:
-                    v1 = v2 = randint(0, vert - 1)
-
-                while v2 == v1 or matriz[v1][v2] == True:
-                    v2 = randint(0, vert - 1)
-
-                matriz[v1][v2] = matriz[v2][v1] = randint(min_weight, max_weight)
-
-                degree[v1] += 1
-                degree[v2] += 1
-
-                num_edges += 1
-
-        return (open_list, matriz)
 
     def DrawGraph(self, prim):
         l_prim = [i[:2] for i in prim]
@@ -367,23 +280,21 @@ class GrafoListaAdy:
                 return i[1]
 
 def GrafoListaAdy_Prim(grafo, origen):
-    # print grafo.listaAdy
-    num_vert = len(grafo.listaAdy.keys())
     cola = []
 
     cola.append((origen, origen, 0))
 
     visited = [origen]
-    #print (visited)
+
     mst = []
     while (len(cola) != 0):
         u = cola.pop(0)
-        #print (u)
+
         if u[1] not in visited:
             visited.append(u[1])
             mst.append(u)
-        for i in grafo.listaAdy[u[1]]:
-        # print i
+        for i in grafo.listaAdy[u[1]]:#listaAdya é un diccionario, onde a llave é o vertice e o valor é a lista do vertices adyacentes a ele
+
             if i[0] not in visited:
                 cola.append((u[1], i[0], i[1]))
         cola = sorted(cola, key=lambda e: e[2])
@@ -424,7 +335,7 @@ def GrafoListaAdya_Dijkstra(grafo, origen):
 
 def GrafoListAdy_Floyd(grafo):
     cn = len(grafo.listaAdy.keys())
-    #print (grafo.listaAdy)
+
     x = [[float('inf')] * cn for i in range(cn)]
     dt = 0
 
@@ -434,11 +345,11 @@ def GrafoListAdy_Floyd(grafo):
             pos_j = grafo.listaAdy.keys().index(j[0])
             x[pos_i][pos_i] = 0
             x[pos_i][pos_j] = j[1]
-    #print (x)
+
     for k in range(cn):
         for i in range(cn):
             for j in range(cn):
-                # int dt = path[i][k] + path[k][j]
+
                 dt = x[i][k] + x[k][j]
 
                 if (x[i][j] > dt):
@@ -462,9 +373,9 @@ def GrafoListaAdy_Kruskal(grafo):
     for v1,adj in grafo.listaAdy.items():
         for v2, weight in adj:
             edges.append((v1,v2, weight))
-    #edges = list(grafo.listaAdy.keys())
+
     edges.sort(key=lambda x: x[2])
-    #print edges
+
     # Para toda arista(u,v) en G.E
     for e in edges:
         u, v, weight= e
@@ -485,15 +396,13 @@ def GrafoListaAdy_Kruskal(grafo):
 class MatrizIncidencia:
     def __init__(self, vert, matriz):
         self.vertices, m = vert,matriz
-        for i in m:
-            for j in i:
-                print (j),
+
 
 
         print("\n")
 
         arestas = 0
-        for i in range(len(m)):
+        for i in range(len(m)):#para transformar a matriz de adyacencia en matriz de incidencia
             for j in range(i, len(m)):
                 arestas += 1 if m[i][j] != 0 else 0
 
@@ -532,46 +441,7 @@ class MatrizIncidencia:
                         ady.append(self.vertices[j])
         return ady
 
-    def GenGrafo(self, vert, edges, min_weight=1, max_weight=100):
-        if edges > ((vert - 1) * (vert)) // 2:
-            print("Graph cannot be generated. Too many edges")
-            return None
-        else:
-            matriz = np.zeros((vert, vert), dtype=np.int)
-            degree = np.zeros(vert, dtype=np.int)
-            num_edges = 0
 
-            lst_vert = [i for i in range(vert)]
-
-            # shuffle(lst_vert)
-            open_list = [lst_vert.pop(0)]
-            while len(lst_vert) > 0 and num_edges < edges:
-                v1 = open_list[randint(0, len(open_list) - 1)]
-                v2 = lst_vert.pop(0)
-
-                degree[v1] += 1
-                degree[v2] += 1
-
-                matriz[v1][v2] = matriz[v2][v1] = randint(min_weight, max_weight)
-
-                num_edges += 1
-                open_list.append(v2)
-            while num_edges < edges:
-                v1 = v2 = randint(0, vert - 1)
-                while degree[v1] == vert - 1:
-                    v1 = v2 = randint(0, vert - 1)
-
-                while v2 == v1 or matriz[v1][v2] == True:
-                    v2 = randint(0, vert - 1)
-
-                matriz[v1][v2] = matriz[v2][v1] = randint(min_weight, max_weight)
-
-                degree[v1] += 1
-                degree[v2] += 1
-
-                num_edges += 1
-
-        return (open_list, matriz)
 
     def DrawGraph(self, prim):
         #print prim
@@ -604,9 +474,7 @@ def GrafoMatrizInci_Prim(grafo, origen):
 
     cola = []
     cola.append((origen, origen, 0))
-    mst = []
     visited = [origen]
-    #print (visited)
     mst = []
     while (len(cola) != 0):
         u = cola.pop(0)
@@ -617,11 +485,11 @@ def GrafoMatrizInci_Prim(grafo, origen):
         pos_v1 = grafo.vertices.index(u[1])
 
         for i in grafo.vertadyac(u[1]):
-        # print i
+
             if i not in visited:
                 pos_v2 = grafo.vertices.index(i)
                 for j in range(len(grafo.matriz_inci[0])):
-                    # pass
+
                     if grafo.matriz_inci[pos_v1][j] == grafo.matriz_inci[pos_v2][j] ==1:
                         cola.append((u[1], i, grafo.matriz_inci[-1][j]))
         cola = sorted(cola, key=lambda e: e[2])
@@ -725,10 +593,16 @@ def GrafoMatrizInci_Kruskal(grafo):
 if __name__ == '__main__':
     vert=int(input('Insere a quantidade de vertices '))
     ar = int(input('Insere a quantidade de arestas '))
+
     vert, matriz = GenGrafo(vert,ar)
+    edges =0
+    for i in range(len(vert)):
+        for j in range(i,len(vert)):
+            edges+= 1 if matriz[i][j] != 0 else 0
+    print "Numero de Arestas: "+str(edges)
 
     grafo=GrafoMatrizAdya(vert,matriz)
-    grafo.printMatrix()
+   # grafo.printMatrix()
     print grafo.vertices
     p_ini_time = time()
     prim=GrafoMatrizAy_Prim(grafo,1)
