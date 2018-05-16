@@ -138,7 +138,7 @@ def GrafoMatrizAy_Dijkstra(grafo, origen):
     padre=[None] *len(grafo.vertices)
 
     distancia[grafo.vertices.index(origen)]=0
-    list_aux=[]
+    list_aux=[]# fila com prioridade
     list_aux.append((origen,distancia[grafo.vertices.index(origen)]))
 
     while len(list_aux)!=0:
@@ -533,23 +533,21 @@ def GrafoMatrizInci_Floyd(grafo):
 
     for i in range(ca):
         txt = ""
-        # print("i: %d" %i)
+
         for j in range(cn):
-            # print("j: %d" %j)
+
             if grafo.matriz_inci[j][i] != 0:
                 txt += str(j) + " "
-                # print ("valor: %d" % grafo.matriz_inci[j][i])
-            # print "----"
+
             x[j][j] = 0
-        # print txt
-        # print grafo.matriz_inci[cn]
+
         x[int(txt.split()[0])][int(txt.split()[1])] = grafo.matriz_inci[cn][i]
         x[int(txt.split()[1])][int(txt.split()[0])] = grafo.matriz_inci[cn][i]
 
     for k in range(cn):
         for i in range(cn):
             for j in range(cn):
-                # int dt = path[i][k] + path[k][j]
+
                 dt = x[i][k] + x[k][j]
 
                 if (x[i][j] > dt):
@@ -575,10 +573,10 @@ def GrafoMatrizInci_Kruskal(grafo):
         for j in range(len(grafo.vertices)):
             if grafo.matriz_inci[j][i] == 1:
                  txt += str(grafo.vertices[j]) + ' '
-        #print txt
+
         edges.append((int(txt.split()[0]),int(txt.split()[1]),grafo.matriz_inci[-1][i]))
     edges.sort(key=lambda x: x[2])
-    #print(edges)
+
     # Para toda arista(u,v) en G.E
     for e in edges:
         u, v,weight = e
