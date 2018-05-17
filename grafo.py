@@ -124,7 +124,7 @@ def GrafoMatrizAy_Prim(grafo, origen):
             if grafo.matrizAdya[u[1]][i] != 0 and grafo.vertices[i] not in visited:
                 cola.append((u[1], i, grafo.matrizAdya[u[1]][i]))
         cola = sorted(cola, key=lambda e: e[2])#ordena fila segum peso de aresta
-    print("Prim: "+str(mst))
+    print("\nPrim: "+str(mst))
     return mst
 
 
@@ -226,7 +226,6 @@ def GrafoMatrizAy_Kruskal(grafo):
         for j in range(len(grafo.vertices)):
             if grafo.matrizAdya[i][j] !=0:
                 edges.append((grafo.vertices[i],grafo.vertices[j],grafo.matrizAdya[i][j]))
-    #print edges
     edges.sort(key=lambda x: x[2])
 
     # Para toda arista(u,v) en G.E
@@ -298,7 +297,7 @@ def GrafoListaAdy_Prim(grafo, origen):
             if i[0] not in visited:
                 cola.append((u[1], i[0], i[1]))
         cola = sorted(cola, key=lambda e: e[2])
-    print ("Prim: "+str(mst))
+    print ("\nPrim: "+str(mst))
     return mst
 
 
@@ -315,7 +314,6 @@ def GrafoListaAdya_Dijkstra(grafo, origen):
         u=list_aux.pop(0)
         visto[u[0]]=True
         ady = grafo.vertadyac(u[0])
-        #print ady
 
         for i in range(len(ady)):
             #si distancia[v] > distancia[u] + peso (u, v) hacer
@@ -397,10 +395,6 @@ class MatrizIncidencia:
     def __init__(self, vert, matriz):
         self.vertices, m = vert,matriz
 
-
-
-        print("\n")
-
         arestas = 0
         for i in range(len(m)):#para transformar a matriz de adyacencia en matriz de incidencia
             for j in range(i, len(m)):
@@ -422,7 +416,7 @@ class MatrizIncidencia:
     def pesoarista(self, v1, v2):
         pos_v1= self.vertices.index(v1)
         pos_v2= self.vertices.index(v2)
-        #n = len(self.vertices)
+
         peso = 0
         for i in range(len(self.matriz_inci[0])):
             if self.matriz_inci[pos_v1][i] != 0 and self.matriz_inci[pos_v2][i] != 0:
@@ -444,9 +438,7 @@ class MatrizIncidencia:
 
 
     def DrawGraph(self, prim):
-        #print prim
         l_prim = [i[:2] for i in prim]
-        #print l_prim
         graph = nx.Graph()
         plt.axis('off')
         cn = len(self.vertices)
@@ -454,9 +446,7 @@ class MatrizIncidencia:
 
         for i in range(ca):
             txt = ""
-            # print("i: %d" %i)
             for j in range(cn):
-                # print("j: %d" %j)
                 if self.matriz_inci[j][i] != 0:
                     txt += str(j) + " "
             graph.add_edge(int(txt.split()[0]), int(txt.split()[1]), peso=self.matriz_inci[cn][i])
@@ -493,7 +483,7 @@ def GrafoMatrizInci_Prim(grafo, origen):
                     if grafo.matriz_inci[pos_v1][j] == grafo.matriz_inci[pos_v2][j] ==1:
                         cola.append((u[1], i, grafo.matriz_inci[-1][j]))
         cola = sorted(cola, key=lambda e: e[2])
-    print ("Prim: "+str(mst))
+    print ("\nPrim: "+str(mst))
     return mst
 
 
@@ -592,75 +582,79 @@ if __name__ == '__main__':
     vert=int(input('Insere a quantidade de vertices '))
     ar = int(input('Insere a quantidade de arestas '))
 
+    print "****************  Matriz de Adjacência  *********************************"
     vert, matriz = GenGrafo(vert,ar)
     edges =0
     for i in range(len(vert)):
         for j in range(i,len(vert)):
             edges+= 1 if matriz[i][j] != 0 else 0
-    print "Numero de Arestas: "+str(edges)
-
+    #print "Numero de Arestas: "+str(edges)
+    print "Matriz de Adjacência: "
     grafo=GrafoMatrizAdya(vert,matriz)
-   # grafo.printMatrix()
-    print grafo.vertices
+    grafo.printMatrix()
+    print "\nVertices: "+str(grafo.vertices)
     p_ini_time = time()
     prim=GrafoMatrizAy_Prim(grafo,1)
     print("Tempo do Prim: %.4f \n" % (time()-p_ini_time))
     time_ini_floyd = time()
     floyd = GrafoMatrizAy_Floyd(grafo)
-    print("Tempo do Floyd: %.4f \n" % (time()-time_ini_floyd))
+    print("Tempo do Floyd: %.4f " % (time()-time_ini_floyd))
+    print("Floyd: ")
     for i in floyd:
         print i
     time_ini_djk=time()
     p,d = GrafoMatrizAy_Dijkstra(grafo, 2)
-    print("Tempo do Dijkstra: %.4f \n" % (time()-time_ini_djk))
+    print("\nTempo do Dijkstra: %.4f " % (time()-time_ini_djk))
     print "distancia: "+str(d)
     print "padre: "+str(p)
     time_ini_k=time()
     mst = GrafoMatrizAy_Kruskal(grafo)
-    print("Tempo do Kruskal: %.4f \n" % (time()-time_ini_k))
+    print("\nTempo do Kruskal: %.4f " % (time()-time_ini_k))
     print "kruskal: "+str(mst)
-    #grafo.DrawGraph(prim)
 
-    print "*************************************************"
+    print "\n****************  Lista de Adjacência  *********************************"
     grafo_lst = GrafoListaAdy(vert,matriz)
+    print "Lista de Adjacência: "
     print grafo_lst.listaAdy
     p_ini_time = time()
     prim = GrafoListaAdy_Prim(grafo_lst,1)
-    print("Tempo do Prim: %.4f \n"%(time()-p_ini_time))
+    print("Tempo do Prim: %.4f \n" %(time()-p_ini_time))
     time_ini_floyd = time()
     f = GrafoListAdy_Floyd(grafo_lst)
-    print("Tempo do Floyd: %.4f \n" % (time()-time_ini_floyd))
+    print("Tempo do Floyd: %.4f " % (time()-time_ini_floyd))
+    print("Floyd: ")
     for i in f:
         print i
     time_ini_djk = time()
     p,d =GrafoListaAdya_Dijkstra(grafo_lst, 2)
-    print("Tempo do Dijkstra: %.4f \n" % (time()-time_ini_djk))
+    print("\nTempo do Dijkstra: %.4f " % (time()-time_ini_djk))
     print "distancia: "+str(d)
     print "padre: "+str(p)
     time_ini_k =time()
     mst = GrafoListaAdy_Kruskal(grafo_lst)
-    print("Tempo do Kruskal: %.4f \n" % (time()-time_ini_k))
+    print("\nTempo do Kruskal: %.4f " % (time()-time_ini_k))
     print "kruskal: "+str(mst)
-    #grafo_lst.DrawGraph(prim)
 
-    print "**************************************************"
+    print "\n****************  Matriz de Incidência  *********************************"
+    print "Matriz de Incidência: "
     grafo_inci = MatrizIncidencia(vert,matriz)
     p_ini_time = time()
     prim = GrafoMatrizInci_Prim(grafo_inci,1)
     print("Tempo do Prim: %.4f \n"%(time()-p_ini_time))
     time_ini_floyd=time()
     f =GrafoMatrizInci_Floyd(grafo_inci)
-    print("Tempo do Floyd: %.4f \n" % (time()-time_ini_floyd))
+    print("Tempo do Floyd: %.4f " % (time()-time_ini_floyd))
+    print("Floyd: ")
     for i in f:
         print i
     time_ini_djk=time()
     p,d =GrafoMatrizInci_Dijkstra(grafo_inci, 2)
-    print("Tempo do Dijkstra: %.4f \n" % (time()-time_ini_djk))
+    print("\nTempo do Dijkstra: %.4f " % (time()-time_ini_djk))
     print "distancia: "+str(d)
     time_ini_k = time()
     print "padre: "+str(p)
     mst = GrafoMatrizInci_Kruskal(grafo_inci)
-    print("Tempo do Kruskal: %.4f \n" % (time()-time_ini_k))
+    print("\nTempo do Kruskal: %.4f " % (time()-time_ini_k))
     print "kruskal: "+str(mst)
     if graphic:
         grafo_inci.DrawGraph(mst)
