@@ -13,13 +13,7 @@
     <favorites_list name="Study" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Parte2-Trabalho.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Parte2-Trabalho.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -364,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526651112059</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Cambiando nombre del archivo">
+      <created>1526651269664</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1526651269664</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -373,13 +374,13 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" weight="0.32831326" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49730977" weight="0.3433735" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49730977" weight="0.3433735" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info id="Favorites" order="2" sideWeight="0.506006" side_tool="true" weight="0.24980783" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993994" />
+      <window_info id="Favorites" order="2" sideWeight="0.506006" side_tool="true" weight="0.24980783" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24980783" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -391,21 +392,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24980783" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493994" weight="0.24980783" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.32680723" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993994" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" weight="0.32831326" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Favorites" order="2" sideWeight="0.506006" side_tool="true" weight="0.24980783" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Python Console" order="8" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -441,27 +442,9 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grafo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11220">
-          <caret line="660" lean-forward="true" selection-start-line="660" selection-end-line="660" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grafo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9333">
-          <caret line="549" selection-start-line="549" selection-end-line="549" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grafo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8850">
-          <caret line="590" column="10" selection-start-line="590" selection-start-column="9" selection-end-line="590" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/grafo.py" />
+    <entry file="file://$PROJECT_DIR$/grafo.py" />
+    <entry file="file://$PROJECT_DIR$/grafo.py" />
     <entry file="file://$PROJECT_DIR$/Parte2_Trabajo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
@@ -625,15 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grafo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="660" selection-start-line="660" selection-end-line="660" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Parte2-Trabalho.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/grafo.py" />
   </component>
 </project>
