@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="" />
+    <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="rectificando commit">
+      <change afterPath="$PROJECT_DIR$/study/algoritmo_mochila_ej23.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +16,26 @@
     <favorites_list name="Study" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Parte2-Trabalho.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Parte2-Trabalho.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="algoritmo_mochila_ej23.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/study/algoritmo_mochila_ej23.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-24">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -44,6 +66,7 @@
         <option value="Laura &lt;lpvera22@gmail.com&gt;" />
       </list>
     </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -60,6 +83,7 @@
         <option value="$PROJECT_DIR$/grafogen.py" />
         <option value="$PROJECT_DIR$/Parte2_Trabajo.py" />
         <option value="$PROJECT_DIR$/grafo.py" />
+        <option value="$PROJECT_DIR$/study/algoritmo_mochila_ej23.py" />
       </list>
     </option>
   </component>
@@ -68,6 +92,9 @@
     <option name="y" value="16" />
     <option name="width" value="1275" />
     <option name="height" value="732" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -80,6 +107,11 @@
             <path>
               <item name="Study" type="b2602c69:ProjectViewProjectNode" />
               <item name="Study" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Study" type="462c0819:PsiDirectoryNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -104,7 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.grafo">
+  <component name="RunManager" selected="Python.algoritmo_mochila_ej23">
     <configuration name="Parte 1 Trabajo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -141,6 +173,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="algoritmo_mochila_ej23" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Study" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/study" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/study/algoritmo_mochila_ej23.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="grafo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,9 +213,11 @@
       <item itemvalue="Python.Parte 1 Trabajo" />
       <item itemvalue="Python.Parte2_Trabajo" />
       <item itemvalue="Python.grafo" />
+      <item itemvalue="Python.algoritmo_mochila_ej23" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.algoritmo_mochila_ej23" />
         <item itemvalue="Python.grafo" />
         <item itemvalue="Python.Parte2_Trabajo" />
         <item itemvalue="Python.Parte 1 Trabajo" />
@@ -370,11 +422,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" weight="0.32831326" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49730977" weight="0.3433735" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.3433735" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -434,7 +487,9 @@
     <MESSAGE value="Comentando metodos" />
     <MESSAGE value="listo para enviar" />
     <MESSAGE value="Cambiando nombre del archivo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambiando nombre del archivo" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;Parte2-Trabalho.py" />
+    <MESSAGE value="rectificando commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="rectificando commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -609,5 +664,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grafo.py" />
+    <entry file="file://$PROJECT_DIR$/Parte2-Trabalho.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study/algoritmo_mochila_ej23.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
