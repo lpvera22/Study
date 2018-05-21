@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="rectificando commit">
-      <change afterPath="$PROJECT_DIR$/study/algoritmo_mochila_ej23.py" afterDir="false" />
+    <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="algoritmo_mochila_ej23.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/study/algoritmo_mochila_ej23.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="78">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -417,7 +416,21 @@
       <option name="project" value="LOCAL" />
       <updated>1526651269664</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Algoritmo Recursivo de la mochila">
+      <created>1526860957074</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1526860957074</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Agregando algunos comentarios">
+      <created>1526861533288</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1526861533288</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -489,7 +502,9 @@
     <MESSAGE value="Cambiando nombre del archivo" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;Parte2-Trabalho.py" />
     <MESSAGE value="rectificando commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="rectificando commit" />
+    <MESSAGE value="Algoritmo Recursivo de la mochila" />
+    <MESSAGE value="Agregando algunos comentarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregando algunos comentarios" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -673,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/study/algoritmo_mochila_ej23.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="78">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
