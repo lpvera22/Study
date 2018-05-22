@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_7.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_9.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_6.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,18 +17,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Ejercicio_6.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_6.py">
+      <file leaf-file-name="Ejercicio_9.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_9.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="21" column="24" lean-forward="true" selection-start-line="4" selection-end-line="21" selection-end-column="24" />
+            <state relative-caret-position="85">
+              <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ejercicio_7.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_7.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -83,8 +77,9 @@
         <option value="$PROJECT_DIR$/study/algoritmo_mochila_ej23.py" />
         <option value="$PROJECT_DIR$/Parte2-Trabalho.py" />
         <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_5.py" />
-        <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_7.py" />
         <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_6.py" />
+        <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_7.py" />
+        <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_9.py" />
       </list>
     </option>
   </component>
@@ -142,7 +137,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Ejercicio_6">
+  <component name="RunManager" selected="Python.Ejercicio_9">
     <configuration name="Ejercicio_5" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,6 +174,42 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="Ejercicio_7" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Study" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lista_Ejercicios_3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_7.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Ejercicio_9" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Study" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lista_Ejercicios_3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_9.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="Parte2-Trabalho" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -197,56 +228,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="algoritmo_mochila_ej23" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Study" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/study" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lista_Ejercicios_3/algoritmo_mochila_ej23.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="grafo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Study" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grafo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list>
-      <item itemvalue="Python.grafo" />
-      <item itemvalue="Python.algoritmo_mochila_ej23" />
       <item itemvalue="Python.Parte2-Trabalho" />
       <item itemvalue="Python.Ejercicio_5" />
       <item itemvalue="Python.Ejercicio_6" />
+      <item itemvalue="Python.Ejercicio_7" />
+      <item itemvalue="Python.Ejercicio_9" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Ejercicio_9" />
+        <item itemvalue="Python.Ejercicio_7" />
         <item itemvalue="Python.Ejercicio_6" />
         <item itemvalue="Python.Ejercicio_5" />
         <item itemvalue="Python.Parte2-Trabalho" />
-        <item itemvalue="Python.algoritmo_mochila_ej23" />
-        <item itemvalue="Python.grafo" />
       </list>
     </recent_temporary>
   </component>
@@ -485,17 +480,30 @@
       <option name="project" value="LOCAL" />
       <updated>1527005759394</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Ejercicio 6 corregido y creando plantilla para 7">
+      <created>1527009570975</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1527009570975</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Ejercicio 7 listo!">
+      <created>1527016003226</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1527016003226</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" weight="0.32831326" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.4759036" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.23644578" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -534,8 +542,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="making test" />
-    <MESSAGE value="adding table" />
     <MESSAGE value="adding teste de remoção" />
     <MESSAGE value="adding heapq" />
     <MESSAGE value="finale" />
@@ -559,11 +565,13 @@
     <MESSAGE value="Agregando carpeta de lista de Ejercico 3" />
     <MESSAGE value="Ejercicio 5 Listo" />
     <MESSAGE value="Ejercicio 6 Listo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ejercicio 6 Listo" />
+    <MESSAGE value="Ejercicio 6 corregido y creando plantilla para 7" />
+    <MESSAGE value="Ejercicio 7 listo!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ejercicio 7 listo!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -755,23 +763,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="35" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runner-up.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_7.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="4" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="353">
+          <caret line="26" column="28" lean-forward="true" selection-start-line="22" selection-end-line="26" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="21" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_9.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
