@@ -30,7 +30,7 @@ def GenGrafo(vert, edges, min_weight=1, max_weight=100):
             # shuffle(lst_vert)
             open_list = [lst_vert.pop(0)]
             while len(lst_vert) > 0 and num_edges < edges:
-                print "hola"
+
                 v1 = open_list[randint(0, len(open_list) - 1)]
                 v2 = lst_vert.pop(0)
 
@@ -42,7 +42,7 @@ def GenGrafo(vert, edges, min_weight=1, max_weight=100):
                 num_edges += 1
                 open_list.append(v2)
             while num_edges < edges:
-                print "aqui" 
+
                 v1 = v2 = randint(0, vert - 1)
                 while degree[v1] == vert - 1:
                     v1 = v2 = randint(0, vert - 1)
