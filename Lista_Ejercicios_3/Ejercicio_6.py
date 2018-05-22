@@ -7,7 +7,9 @@ def Mediana(secuencia):
     n=len(secuencia)
 
     if n==2:
-        return (secuencia[0]+secuencia[1])/2
+        suma=float(secuencia[0])+float(secuencia[1])
+        media=float(suma/2)
+        return media
     elif n==1:
         return secuencia[0]
     else:
@@ -15,8 +17,8 @@ def Mediana(secuencia):
         if n % 2 != 0:
             return secuencia[n / 2]
         else:
-            suma=(secuencia[(n / 2)-1]+secuencia[n/2])
-            media=suma/2
+            suma=(float(secuencia[(n / 2)-1])+float(secuencia[n/2]))
+            media=float(suma/2)
             return media
 if __name__=='__main__':
     sec = raw_input('secuencia').split()
