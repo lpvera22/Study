@@ -13,7 +13,13 @@ def Mediana(secuencia):
     elif n==1:
         return secuencia[0]
     else:
-        secuencia.sort()
+
+        for i in range (n):
+
+            for j in range(n):
+                if secuencia[j]<secuencia[i]:
+                    secuencia[i],secuencia[j]=secuencia[j],secuencia[i]
+
         if n % 2 != 0:
             return secuencia[n / 2]
         else:
