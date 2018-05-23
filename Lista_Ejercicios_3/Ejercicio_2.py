@@ -11,7 +11,7 @@ def MayorMenor(secuencia,n):
             menor=secuencia[1]
             mayor=secuencia[0]
         i=2
-        for i in range(n):
+        for i in range(2,n):
             if secuencia[i]>mayor:
                 mayor=secuencia[i]
             elif secuencia[i]<menor:
