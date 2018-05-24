@@ -32,9 +32,10 @@ class ABB:
         else:
             return False
 
-    def FBalanciamiento(self):
+    def FBalanciamiento(self,lista):
         if self.raiz.esHoja():
-            return 0
+            lista.append((self.raiz.data,0))
+            return lista
         elif self.raiz.TieneHijoIzquierdo() and self.raiz.TieneHijoDerecho():
             return (1 + self.FBalanciamiento(self.raiz.izquierdo)-(1 + self.FBalanciamiento(self.raiz.derecho))
 
