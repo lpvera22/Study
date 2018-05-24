@@ -10,7 +10,9 @@ def ElementMissing(secuencia,n):
     if tam==2 :
         if secuencia[1]-secuencia[0]!=1:
             return secuencia[0]+1
+
     else:
+        return None
 
 
         val=(secuencia[n]-secuencia[0])/2+secuencia[0]
@@ -18,6 +20,7 @@ def ElementMissing(secuencia,n):
             return ElementMissing(secuencia[0:(tam/2)+1],tam/2)
         else:
             return ElementMissing(secuencia[(tam/2):tam],n/2)
+
 if __name__=="__main__":
     n=int(input('n'))
     sec= raw_input('secuencia').split( )

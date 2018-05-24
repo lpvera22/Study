@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_14.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_14.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_14.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +20,17 @@
       <file leaf-file-name="Ejercicio_14.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_14.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="204">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="algoritmo_mochila_ej23.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/algoritmo_mochila_ej23.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -100,8 +109,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="75" />
-    <option name="y" value="-4" />
+    <option name="x" value="128" />
+    <option name="y" value="28" />
     <option name="width" value="1273" />
     <option name="height" value="724" />
   </component>
@@ -557,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527129297692</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Ejercicio 14 listo!!!">
+      <created>1527179078916</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1527179078916</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -573,11 +589,11 @@
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298193" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" weight="0.32831326" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.23644578" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.23644578" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -615,7 +631,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Prim en matriz de ady y lista de adyacenciamm" />
     <MESSAGE value="Configurando de nuevo" />
     <MESSAGE value="Mudando a 3.0" />
     <MESSAGE value="Kruskal en ListaAdy" />
@@ -640,7 +655,8 @@
     <MESSAGE value="Arreglando ejercicio 6 para que sea n a la 2 en el peor caso" />
     <MESSAGE value="Ejercicio 9 listo!!!" />
     <MESSAGE value="Ejercicio 13 listo!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ejercicio 13 listo!!!" />
+    <MESSAGE value="Ejercicio 14 listo!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ejercicio 14 listo!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -864,13 +880,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grafo.py" />
-    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/algoritmo_mochila_ej23.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Parte2-Trabalho.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -962,10 +971,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/algoritmo_mochila_ej23.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_14.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="204">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
         </state>
       </provider>
     </entry>
