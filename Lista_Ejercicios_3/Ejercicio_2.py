@@ -19,7 +19,13 @@ def MayorMenor(secuencia,n):
         return mayor,menor
 
     else:
-        return secuencia[n]
+        return secuencia[0]
+if __name__=="__main__":
+    n=int(input('n'))
+    sec= raw_input('secuencia').split( )
+    S=[int(i) for i in sec]
+    #k = int(input('k'))
+    print(MayorMenor(S,n))
 
 
 
