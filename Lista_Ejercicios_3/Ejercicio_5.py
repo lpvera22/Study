@@ -7,17 +7,21 @@ from PyQt4.uic.Compiler.qtproxies import i18n_void_func
 
 
 def MenorEnteroMayorSecuencia(secuencia,n,k):
-    if k==secuencia[n]:
-        print 'Impossible to return the element'
-    elif k ==secuencia[n/2]:
-        return secuencia[n/2+1]
+    if n>1:
 
-    elif k > secuencia[n/2]:
-        return MenorEnteroMayorSecuencia(secuencia[n/2:n],n/2,k)
-    elif k < secuencia[n/2]:
-        return MenorEnteroMayorSecuencia(secuencia[0:n/2], n / 2, k)
+        if k ==secuencia[n/2]:
+            return secuencia[n/2+1]
+
+        elif k > secuencia[n/2]:
+            return MenorEnteroMayorSecuencia(secuencia[n/2:n],n/2,k)
+        elif k < secuencia[n/2]:
+            return MenorEnteroMayorSecuencia(secuencia[0:n/2], n / 2, k)
+
     else:
         print('Element not found')
+
+
+
 
 if __name__=="__main__":
     n=int(input('n'))
