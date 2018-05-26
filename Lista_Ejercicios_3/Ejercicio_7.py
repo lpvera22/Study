@@ -4,11 +4,9 @@ se existem A[i] e A[j] tais que x = A[i] +A[j], sendo que o seu algoritmo dever 
 problema. Dica: O que se pode concluir da comparação de A[1] + A[n] com x?'''
 
 def sumaigualx(A,x,n):
-    i=0
-    j=n-1
-    if A[0]<x and A[j]*2>x :
-
-
+    if n>1:
+        i=0
+        j=n-1
 
         while(A[i]!=A[j] and i<=j):
             if A[i]+A[j]>x:
@@ -19,6 +17,9 @@ def sumaigualx(A,x,n):
                 print(A[i],A[j])
                 i=i+1
                 j=j-1
+    else:
+        return A[0]
+
 if __name__ == '__main__':
     sec = raw_input('A').split()
     A = [int(i) for i in sec]

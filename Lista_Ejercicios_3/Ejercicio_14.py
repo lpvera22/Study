@@ -1,7 +1,7 @@
 # *-* encoding:UTF-8 *-*
 '''a) Dada uma sequência ordenada em ordem crescente com n números inteiros distintos todos entre 1 e n+1,
 elabore um algoritmo que determine o número que está faltando na sequência. A complexidade do seu
-algoritmo deve ser O(log n), considerando o número de vezes que os elementos da sequência são acessados,
+algoritmo deve ser O(log n), considerando o número de vezes que os ele9mentos da sequência são acessados,
 isto é, o seu algoritmo pode realizar no máximo O(log n) acessos à sequência.
 b) Considerando esta função de complexidade, responda se o seu algoritmo é Θ (log n). Justifique.'''
 
@@ -11,10 +11,10 @@ def ElementMissing(secuencia,n):
         if secuencia[1]-secuencia[0]!=1:
             return secuencia[0]+1
 
+        else:
+            return None
+
     else:
-        return None
-
-
         val=(secuencia[n]-secuencia[0])/2+secuencia[0]
         if secuencia[tam/2]!=val:
             return ElementMissing(secuencia[0:(tam/2)+1],tam/2)
