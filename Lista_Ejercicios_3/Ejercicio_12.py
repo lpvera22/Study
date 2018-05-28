@@ -22,25 +22,33 @@ def localizacionX(matriz,n,x):
         else:
             inicio=n/2
             fin=n
-
-        while (inicio<=fin):
+        flag=True
+        while (inicio<=fin and flag):
             if matriz[inicio][0]<x and matriz[inicio][n]>x:
                 fila=inicio
+                flag=False
 
-               flag=False
             else:inicio=inicio+1
-        if matriz[fila][n/2]==x:
-            return fila,n/2
-        elif x>matriz[fila][n/2]:
-            inicio=n/2
-            fin=n
-        else: inicio=0
-        fin=n/2
-        while(inicio<=fin):
-            if matriz[fila][inicio]==x:
-                return fila,inicio
-            else
-                inicio=inicio+1
+
+        inicio=0
+        fin=n
+        flag1=False
+
+        while(inicio<=fin and flag1):
+            if matriz[fila][(inicio + fin) / 2] == x:
+                flag1=True
+                return fila, (inicio + fin) / 2
+
+            elif x > matriz[fila][(inicio + fin) / 2]:
+                inicio = (fin+inicio)/2
+            else:
+                fin=(inicio+fin)/2
+        if flag1!=True:
+            print('Element not found')
+
+
+
+
 
 
 
