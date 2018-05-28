@@ -22,11 +22,12 @@ def localizacionX(matriz,n,x):
         else:
             inicio=n/2
             fin=n
+
         while (inicio<=fin):
-            if matriz[inicio][0]<x and matriz[inicio][n]>n:
+            if matriz[inicio][0]<x and matriz[inicio][n]>x:
                 fila=inicio
 
-                break
+               flag=False
             else:inicio=inicio+1
         if matriz[fila][n/2]==x:
             return fila,n/2
