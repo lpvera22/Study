@@ -5,7 +5,7 @@ se a sua multiplicidade é maior do que n/2. Escreva um algoritmo que determina 
 sequência realizando no máximo 2n-2 comparações.'''
 
 def Maioria(secuencia,n):
-    f
+
     listamult=[]
 
 
