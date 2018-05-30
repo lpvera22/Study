@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_22.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_12.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_12.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,17 +56,26 @@
       <file leaf-file-name="Ejercicio_13.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_13.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="370">
+              <caret line="26" column="33" lean-forward="true" selection-start-line="21" selection-end-line="26" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ejercicio_12.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ejercicio_12.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_12.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="47" column="34" lean-forward="true" selection-start-line="9" selection-end-line="47" selection-end-column="34" />
+            <state relative-caret-position="220">
+              <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="58" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ejercicio_22.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_22.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -76,15 +85,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
               <caret line="39" selection-start-line="39" selection-end-line="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ejercicio_5.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_5.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -169,6 +169,7 @@
         <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_8.py" />
         <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_11.py" />
         <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_12.py" />
+        <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_22.py" />
       </list>
     </option>
   </component>
@@ -231,7 +232,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Ejercicio_12">
+  <component name="RunManager" selected="Python.Ejercicio_22">
     <configuration name="Ejercicio_12" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -245,24 +246,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_12.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="Ejercicio_13" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Study" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lista_Ejercicios_3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_13.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -304,6 +287,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="Ejercicio_22" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Study" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lista_Ejercicios_3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_22.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="Ejercicio_5" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -324,18 +325,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.Ejercicio_5" />
-      <item itemvalue="Python.Ejercicio_13" />
       <item itemvalue="Python.Ejercicio_14" />
       <item itemvalue="Python.Ejercicio_2" />
       <item itemvalue="Python.Ejercicio_12" />
+      <item itemvalue="Python.Ejercicio_22" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Ejercicio_22" />
         <item itemvalue="Python.Ejercicio_12" />
         <item itemvalue="Python.Ejercicio_14" />
         <item itemvalue="Python.Ejercicio_2" />
         <item itemvalue="Python.Ejercicio_5" />
-        <item itemvalue="Python.Ejercicio_13" />
       </list>
     </recent_temporary>
   </component>
@@ -349,13 +350,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524749766797</updated>
-    </task>
-    <task id="LOCAL-00002" summary="restructurando git">
-      <created>1524750240216</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1524750240216</updated>
     </task>
     <task id="LOCAL-00003" summary="arreglando ejercicios">
       <created>1524752194830</created>
@@ -693,7 +687,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527692742960</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="fixing exercise 12">
+      <created>1527703010497</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1527703010497</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -732,7 +733,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="listo para enviar" />
     <MESSAGE value="Cambiando nombre del archivo" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;Parte2-Trabalho.py" />
     <MESSAGE value="rectificando commit" />
@@ -757,7 +757,8 @@
     <MESSAGE value="INtentanto corregir Ejercicio 11 y 12" />
     <MESSAGE value="Arreglando Ejercicio 12" />
     <MESSAGE value="Terminando de arreglar cosillas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Terminando de arreglar cosillas" />
+    <MESSAGE value="fixing exercise 12" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing exercise 12" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -765,13 +766,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_13.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python_blog/vector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1037,13 +1031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_13.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_9.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1079,10 +1066,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_13.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="26" column="33" lean-forward="true" selection-start-line="21" selection-end-line="26" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_12.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="47" column="34" lean-forward="true" selection-start-line="9" selection-end-line="47" selection-end-column="34" />
+        <state relative-caret-position="220">
+          <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="58" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_22.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
