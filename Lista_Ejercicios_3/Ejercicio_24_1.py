@@ -16,21 +16,24 @@ def LCS(X,Y,n,m):
 
 
     for i in range(m+1):
-        L[i][0]=0
+        L[i][0]=[]
     for j in range(n+1):
-        L[0][j]=0
-    for z in L:
-        print(z)
+        L[0][j]=[]
+
 
     for i in range(1,m+1):
         for j in range(1,n+1):
             if (X[i-1] == Y[j-1]):
-                L[i][j] = L[i - 1][j - 1] + 1
-            elif (L[i-1][j] >= L[i][j-1] ):
-                L[i][j] = L[i - 1][j]
+
+                var=L[i - 1][j - 1][:]
+                var.append(X[i-1])
+                L[i][j]=var
+
+
             else:
-                L[i][j] = L[i][j - 1]
-    return L
+                L[i][j]=max(L[i-1][j],L[i][j-1],key=lambda p:len(p))
+
+    return L[i][j]
 '''ObtemLCS(L, X, Y, i, j){
     if(i!=0 && j!=0){
         if ( X[i] == Y[j]){
@@ -53,14 +56,13 @@ def ObtemLCS(L,X,Y,i,j):
 
 
 if __name__=="__main__":
-    X = 'heroically'
-    Y = 'scholarly'
+    X = 'abcdefg'
+    Y = 'hfbcdka'
     n =len(Y)
     m = len(X)
 
     aux=LCS(X,Y,n,m)
-    for i in aux:
-        print(i)
-    ObtemLCS(aux,X,Y,m,n)
+    print(aux)
+    #ObtemLCS(aux,X,Y,m,n)
 
 
