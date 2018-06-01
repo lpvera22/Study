@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_19_b.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_18.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_18.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_25.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_25.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,20 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Ejercicio_18.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_18.py">
+      <file leaf-file-name="Ejercicio_25.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_25.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ejercicio_19_b.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_19_b.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="578">
+              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -106,14 +96,15 @@
         <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_19.py" />
         <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_18.py" />
         <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_19_b.py" />
+        <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_25.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="128" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="95" />
     <option name="y" value="28" />
-    <option name="width" value="1273" />
-    <option name="height" value="724" />
+    <option name="width" value="1271" />
+    <option name="height" value="688" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -171,7 +162,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Ejercicio_19_b">
+  <component name="RunManager" selected="Python.Ejercicio_25">
     <configuration name="Ejercicio_18" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -244,7 +235,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Ejercicio_24_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Ejercicio_25" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -256,26 +247,26 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_24_1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_25.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.Ejercicio_24_1" />
       <item itemvalue="Python.Ejercicio_18" />
       <item itemvalue="Python.Ejercicio_21" />
       <item itemvalue="Python.Ejercicio_19" />
       <item itemvalue="Python.Ejercicio_19_b" />
+      <item itemvalue="Python.Ejercicio_25" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Ejercicio_25" />
         <item itemvalue="Python.Ejercicio_19_b" />
         <item itemvalue="Python.Ejercicio_18" />
         <item itemvalue="Python.Ejercicio_19" />
         <item itemvalue="Python.Ejercicio_21" />
-        <item itemvalue="Python.Ejercicio_24_1" />
       </list>
     </recent_temporary>
   </component>
@@ -289,20 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524749766797</updated>
-    </task>
-    <task id="LOCAL-00009" summary="adding teste de remoção">
-      <created>1524842501683</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1524842501683</updated>
-    </task>
-    <task id="LOCAL-00010" summary="adding heapq">
-      <created>1524852877217</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1524852877217</updated>
     </task>
     <task id="LOCAL-00011" summary="finale">
       <created>1524863053989</created>
@@ -633,7 +610,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527826120223</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="ejercicio #19 b">
+      <created>1527829384051</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1527829384052</updated>
+    </task>
+    <task id="LOCAL-00059" summary="ejercicio #25">
+      <created>1527833179612</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1527833179613</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -646,15 +637,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <frame x="95" y="28" width="1271" height="688" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.25570416" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298193" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" weight="0.32831326" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.21084337" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.2413793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Favorites" order="2" sideWeight="0.506006" side_tool="true" weight="0.24980783" />
@@ -672,8 +663,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ejercicio 5 Listo" />
-    <MESSAGE value="Ejercicio 6 Listo" />
     <MESSAGE value="Ejercicio 6 corregido y creando plantilla para 7" />
     <MESSAGE value="Ejercicio 7 listo!" />
     <MESSAGE value="Ejercicio 9 listo!" />
@@ -697,7 +686,9 @@
     <MESSAGE value="EJERCICIO 18 HECHO y comentado" />
     <MESSAGE value="ejercicio #21" />
     <MESSAGE value="ejercicio #19" />
-    <option name="LAST_COMMIT_MESSAGE" value="ejercicio #19" />
+    <MESSAGE value="ejercicio #19 b" />
+    <MESSAGE value="ejercicio #25" />
+    <option name="LAST_COMMIT_MESSAGE" value="ejercicio #25" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -719,7 +710,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grafo.py" />
     <entry file="file://$PROJECT_DIR$/Parte2_Trabajo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
@@ -1047,8 +1037,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_19_b.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state>
+          <caret selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_25.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
         </state>
       </provider>
     </entry>
