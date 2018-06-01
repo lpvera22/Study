@@ -33,5 +33,5 @@ def convex_hull(points):
 
     #Juntando os dois cascos convexos
     return lower[:-1] + upper[:-1]
-points=[(2,1),(6,1),(4,1),(5,1)]
+points=[(1,1),(2,2),(3,3),(3,1),(1,3)]
 print(convex_hull(points))
