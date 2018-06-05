@@ -16,7 +16,7 @@ def CantRepeti(secuencia,n):
             aux[secuencia[i]]+=1
     else:
         aux[secuencia[0]]=1
-    return (aux)
+    return aux
 if __name__ == '__main__':
     sec = raw_input('A').split()
     S = [int(i) for i in sec]

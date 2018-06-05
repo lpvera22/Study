@@ -71,8 +71,8 @@ def doIntersect(p1,q1,p2,q2):
     return False
 
 def poligono_simple(puntos,n):
-    if n==1:
-        return False
+    if n==3:
+        return True
     else:
         segmentos=[]
         for i in range(n-1):
