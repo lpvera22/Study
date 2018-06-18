@@ -17,22 +17,23 @@ def sub_s(l,r,k,X):
     else:
         X,medio=Partition(X,l,r)
         if r-medio+1>=k:
-            return sub_s(medio+1,r,k-(medio-l+1),X)
+            return sub_s(medio, r, k, X)
         else:
-            return sub_s(l, medio, k, X)
+            return sub_s(l,medio-1,k-(r-medio+1),X)
 
 def Partition(X,left,right):
     l=left
     r=right
     pivot=X[r]
     while l<r:
+        while (X[r] >= pivot and r >= l):
+            r = r - 1
         while( X[l]<pivot and l<=r):
             l+=1
-        while(X[r]>=pivot and r>=l):
-            r=r-1
+
         if l<r:
             X[l],X[r]=X[r],X[l]
-    medio=r
+    medio=l
     X[right],X[medio]=X[medio],X[right]
     return X,medio
 
