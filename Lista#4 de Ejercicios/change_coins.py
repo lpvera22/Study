@@ -13,9 +13,9 @@ def change_coins(amount,total,den):
         for i in den:
             change[i] = 0
         j=0
-        while(n!=0 and j<=len(den)):
+        while(n!=0 ):
             if n>=den[j]:
-                change[j]+=1
+                change[den[j]]+=1
                 n=n-den[j]
 
             else:
