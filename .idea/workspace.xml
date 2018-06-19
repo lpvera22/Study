@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lista#4 de Ejercicios/Greedy_change_coins.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +20,8 @@
       <file leaf-file-name="change_coins.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+            <state relative-caret-position="91">
+              <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -29,8 +29,8 @@
       <file leaf-file-name="Ejercicio_6.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_6.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="37" column="30" lean-forward="true" selection-start-line="32" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="629">
+              <caret line="37" column="30" selection-start-line="32" selection-end-line="37" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -139,16 +139,6 @@
               <item name="Study" type="b2602c69:ProjectViewProjectNode" />
               <item name="Study" type="462c0819:PsiDirectoryNode" />
               <item name="Lista#4 de Ejercicios" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Study" type="462c0819:PsiDirectoryNode" />
-              <item name="Lista_Ejercicios_3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Study" type="462c0819:PsiDirectoryNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -298,20 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524749766797</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Prim en matriz de ady y lista de adyacencia">
-      <created>1525693112361</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1525693112407</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Prim en matriz de ady y lista de adyacenciamm">
-      <created>1525693178443</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1525693178443</updated>
     </task>
     <task id="LOCAL-00016" summary="Prim en matriz de ady y lista de adyacenciamm">
       <created>1526081223293</created>
@@ -642,7 +618,21 @@
       <option name="project" value="LOCAL" />
       <updated>1529339525931</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="cambiando el algoritomo change_coins para realizar por programacion dinamica">
+      <created>1529375598890</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1529375598891</updated>
+    </task>
+    <task id="LOCAL-00064" summary="cambiando el algoritomo change_coins para que devuelva la cantidad de monedas de cada tipo">
+      <created>1529414019389</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1529414019390</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -661,13 +651,13 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298193" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" weight="0.32831326" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.21084337" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3298193" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info id="Favorites" order="2" sideWeight="0.506006" side_tool="true" weight="0.24980783" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990964" />
+      <window_info id="Favorites" order="2" sideWeight="0.506006" side_tool="true" weight="0.24980783" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24980783" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -681,8 +671,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ejercicio 9 listo!" />
-    <MESSAGE value="Ejercicio 9 no listo y haciendo ejercicio 2" />
     <MESSAGE value="Ejercicio 2 listo!" />
     <MESSAGE value="Arreglando ejercicio 6 para que sea n a la 2 en el peor caso" />
     <MESSAGE value="Ejercicio 9 listo!!!" />
@@ -706,7 +694,9 @@
     <MESSAGE value="ejercicio #25" />
     <MESSAGE value="ejercicio #25 LISTO!!" />
     <MESSAGE value="primeras lineas de Greedy_change_coins" />
-    <option name="LAST_COMMIT_MESSAGE" value="primeras lineas de Greedy_change_coins" />
+    <MESSAGE value="cambiando el algoritomo change_coins para realizar por programacion dinamica" />
+    <MESSAGE value="cambiando el algoritomo change_coins para que devuelva la cantidad de monedas de cada tipo" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambiando el algoritomo change_coins para que devuelva la cantidad de monedas de cada tipo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -721,11 +711,6 @@
           <line>23</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -734,7 +719,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="44" />
+      <option name="time" value="51" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -1074,15 +1059,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="37" column="30" lean-forward="true" selection-start-line="32" selection-end-line="37" selection-end-column="30" />
+        <state relative-caret-position="629">
+          <caret line="37" column="30" selection-start-line="32" selection-end-line="37" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        <state relative-caret-position="91">
+          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
         </state>
       </provider>
     </entry>

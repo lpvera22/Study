@@ -6,41 +6,35 @@ def change_coins(amount,total,den):
     #den: denominations of the coins in this case 1,5,10 and 25
 
 
-    F=[]# list for returning the result
-    F.append(0)
     n=total-amount
-    aux=[]
-    change={}
-    for i in range(1,n+1):
-        temp=float('inf')
-        j=1
-        while j<=len(den)-1 and i>=den[j]:
-            temp=min(F[i-den[j]],temp)
+    if n>0:
+        den.sort(reverse=True)
+        change = {}  # change: dictionary for the result
+        for i in den:
+            change[i] = 0
+        j=0
+        while(n!=0 and j<=len(den)):
+            if n>=den[j]:
+                change[j]+=1
+                n=n-den[j]
 
-            j+=1
-        aux.append(den[j-1])
-
-
-        F.insert(i,temp+1)
-
-    if aux[n-1]*F[n]==n:
-        change[aux[n-1]]=F[n]
-    while (aux[n-1]*F[n]!=n or n!=0):
-        if aux[n-1]*F[n]<n or aux[n-1]*F[n]>n :
-            change[aux[n - 1]] = F[n]
-            n=n-1
+            else:
+                j+=1
+        return change
+    else:
+        return 0
 
 
 
 
 
 
-    return F,aux, change
 
 if __name__=='__main__':
 
     amount=input('amount')
     total=input('total')
-    den=[0,1,5,10,25]
+    den=[1,5,10,25]
 
-    print change_coins(amount,total,den)
+
+    print(change_coins(amount,total,den))
