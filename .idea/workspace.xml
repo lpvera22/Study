@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/Greedy_change_coins.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_13_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_11.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_13.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_13.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lista_Ejercicios_3/algoritmo_mochila_ej23.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista_Ejercicios_3/algoritmo_mochila_ej23.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lista#4 de Ejercicios/Greedy_change_coins.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Greedy_change_coins.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/Greedy_change_coins.py">
+      <file leaf-file-name="change_coins.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+            <state relative-caret-position="323">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ejercicio_6.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_6.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="37" column="30" lean-forward="true" selection-start-line="32" selection-end-line="37" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -59,6 +63,7 @@
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="Laura Pérez Vera &lt;lpvera22@gmail.com&gt;" />
+        <option value="l" />
         <option value="Laura &lt;lpvera22@gmail.com&gt;" />
       </list>
     </option>
@@ -105,6 +110,7 @@
         <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_13.py" />
         <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_13_1.py" />
         <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/Greedy_change_coins.py" />
+        <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py" />
       </list>
     </option>
   </component>
@@ -133,6 +139,11 @@
               <item name="Study" type="b2602c69:ProjectViewProjectNode" />
               <item name="Study" type="462c0819:PsiDirectoryNode" />
               <item name="Lista#4 de Ejercicios" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Study" type="462c0819:PsiDirectoryNode" />
+              <item name="Lista_Ejercicios_3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Study" type="b2602c69:ProjectViewProjectNode" />
@@ -236,7 +247,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lista#4 de Ejercicios/Greedy_change_coins.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -287,13 +298,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524749766797</updated>
-    </task>
-    <task id="LOCAL-00013" summary="comienzo de parte 2 trabajo">
-      <created>1525523829940</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1525523829940</updated>
     </task>
     <task id="LOCAL-00014" summary="Prim en matriz de ady y lista de adyacencia">
       <created>1525693112361</created>
@@ -631,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527879984637</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="primeras lineas de Greedy_change_coins">
+      <created>1529339525929</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1529339525931</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -670,7 +681,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ejercicio 7 listo!" />
     <MESSAGE value="Ejercicio 9 listo!" />
     <MESSAGE value="Ejercicio 9 no listo y haciendo ejercicio 2" />
     <MESSAGE value="Ejercicio 2 listo!" />
@@ -695,7 +705,8 @@
     <MESSAGE value="ejercicio #19 b" />
     <MESSAGE value="ejercicio #25" />
     <MESSAGE value="ejercicio #25 LISTO!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="ejercicio #25 LISTO!!" />
+    <MESSAGE value="primeras lineas de Greedy_change_coins" />
+    <option name="LAST_COMMIT_MESSAGE" value="primeras lineas de Greedy_change_coins" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -710,8 +721,20 @@
           <line>23</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="37" />
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="44" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -937,13 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_6.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_21.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1056,10 +1072,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/Greedy_change_coins.py">
+    <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+        <state relative-caret-position="211">
+          <caret line="37" column="30" lean-forward="true" selection-start-line="32" selection-end-line="37" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
         </state>
       </provider>
     </entry>
