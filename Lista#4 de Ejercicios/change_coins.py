@@ -10,6 +10,7 @@ def change_coins(amount,total,den):
     F.append(0)
     n=total-amount
     aux=[]
+    change={}
     for i in range(1,n+1):
         temp=float('inf')
         j=1
@@ -17,13 +18,24 @@ def change_coins(amount,total,den):
             temp=min(F[i-den[j]],temp)
 
             j+=1
+        aux.append(den[j-1])
+
 
         F.insert(i,temp+1)
 
+    if aux[n-1]*F[n]==n:
+        change[aux[n-1]]=F[n]
+    while (aux[n-1]*F[n]!=n or n!=0):
+        if aux[n-1]*F[n]<n or aux[n-1]*F[n]>n :
+            change[aux[n - 1]] = F[n]
+            n=n-1
 
 
 
-    return F
+
+
+
+    return F,aux, change
 
 if __name__=='__main__':
 
