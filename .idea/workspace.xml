@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/arbol_cubrimiento_minimo_Prim.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/greedy_camino_menor_costo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,20 +18,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="change_coins.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="change_coins.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            <state>
+              <caret selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ejercicio_6.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_6.py">
+      <file leaf-file-name="greedy_camino_menor_costo.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/greedy_camino_menor_costo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="30" selection-start-line="32" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="85">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+              <folding>
+                <marker date="1529545409839" expanded="true" signature="53:58" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Grafos.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Grafos.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -111,6 +124,9 @@
         <option value="$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_13_1.py" />
         <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/Greedy_change_coins.py" />
         <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py" />
+        <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/arbol_cubrimiento_minimo_Prim.py" />
+        <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/algoritmo_guloso.py" />
+        <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/greedy_camino_menor_costo.py" />
       </list>
     </option>
   </component>
@@ -225,7 +241,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Greedy_change_coins" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Greedy_change_coins" type="PythonConfigurationType" factoryName="Python">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -262,15 +278,14 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
+      <item itemvalue="Python.Greedy_change_coins" />
       <item itemvalue="Python.Ejercicio_8" />
       <item itemvalue="Python.algoritmo_mochila_ej23" />
       <item itemvalue="Python.Ejercicio_13" />
       <item itemvalue="Python.Ejercicio_13_1" />
-      <item itemvalue="Python.Greedy_change_coins" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Greedy_change_coins" />
         <item itemvalue="Python.Ejercicio_13_1" />
         <item itemvalue="Python.Ejercicio_13" />
         <item itemvalue="Python.Ejercicio_8" />
@@ -288,20 +303,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524749766797</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Prim en matriz de ady y lista de adyacenciamm">
-      <created>1526081223293</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1526081223293</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Configurando de nuevo">
-      <created>1526081357383</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1526081357383</updated>
     </task>
     <task id="LOCAL-00018" summary="Mudando a 3.0">
       <created>1526082049816</created>
@@ -632,7 +633,21 @@
       <option name="project" value="LOCAL" />
       <updated>1529414019390</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="volviendo el algoritmo a greedy">
+      <created>1529422736155</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1529422736156</updated>
+    </task>
+    <task id="LOCAL-00066" summary="arreglando errores">
+      <created>1529423117724</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1529423117724</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -648,10 +663,10 @@
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298193" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" weight="0.32831326" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.21084337" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.21084337" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3298193" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -671,8 +686,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ejercicio 2 listo!" />
-    <MESSAGE value="Arreglando ejercicio 6 para que sea n a la 2 en el peor caso" />
     <MESSAGE value="Ejercicio 9 listo!!!" />
     <MESSAGE value="Ejercicio 13 listo!!!" />
     <MESSAGE value="Ejercicio 14 listo!!!" />
@@ -696,7 +709,9 @@
     <MESSAGE value="primeras lineas de Greedy_change_coins" />
     <MESSAGE value="cambiando el algoritomo change_coins para realizar por programacion dinamica" />
     <MESSAGE value="cambiando el algoritomo change_coins para que devuelva la cantidad de monedas de cada tipo" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambiando el algoritomo change_coins para que devuelva la cantidad de monedas de cada tipo" />
+    <MESSAGE value="volviendo el algoritmo a greedy" />
+    <MESSAGE value="arreglando errores" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglando errores" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -732,27 +747,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grafogen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/genGraph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="15" selection-start-line="9" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grafogen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genGraph.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -836,13 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4177">
           <caret line="267" selection-start-line="267" selection-end-line="267" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Grafos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
@@ -1066,8 +1053,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/change_coins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        <state>
+          <caret selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grafos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/algoritmo_guloso.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/arbol_cubrimiento_minimo_Prim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="24" />
+          <folding>
+            <marker date="1529459144831" expanded="true" signature="161:166" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/greedy_camino_menor_costo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding>
+            <marker date="1529545409839" expanded="true" signature="53:58" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
