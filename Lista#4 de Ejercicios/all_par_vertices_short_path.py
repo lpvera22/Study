@@ -1,7 +1,8 @@
 # *-* encoding:UTF-8 *-*
 def all_pairs_shortest_path(costo,n):
     #costo, adjacency matrix of the graph
-    #n, amount of vertexs
+    #n, amount of vertex
+
 
     for m in range(n):
         for x in range(n):
