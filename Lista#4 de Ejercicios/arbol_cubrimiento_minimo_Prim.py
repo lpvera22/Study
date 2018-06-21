@@ -9,5 +9,6 @@ class GrafoListaAd:
 
 def arvol_geradora_mínima(G):
     #G graph to return
+    pass
 
 
