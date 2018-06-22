@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/MCT_grafo_orientado.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lista#4 de Ejercicios/greedy_conjunto_cajas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/greedy_conjunto_cajas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lista#4 de Ejercicios/all_par_vertices_short_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/all_par_vertices_short_path.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,38 +26,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="greedy_conjunto_cajas.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="greedy_conjunto_cajas.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/greedy_conjunto_cajas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="14" lean-forward="true" selection-start-line="1" selection-end-line="18" selection-end-column="14" />
+            <state relative-caret-position="136">
+              <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ejercicio_13.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_13.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ejercicio_11.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lista_Ejercicios_3/Ejercicio_11.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="all_par_vertices_short_path.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="all_par_vertices_short_path.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/all_par_vertices_short_path.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="85">
+              <caret line="5" column="90" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -142,9 +123,9 @@
         <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/algoritmo_guloso.py" />
         <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/arbol_cubrimiento_minimo_Prim.py" />
         <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/greedy_camino_menor_costo.py" />
-        <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/all_par_vertices_short_path.py" />
         <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/MCT_grafo_orientado.py" />
         <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/greedy_conjunto_cajas.py" />
+        <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/all_par_vertices_short_path.py" />
       </list>
     </option>
   </component>
@@ -209,7 +190,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.greedy_conjunto_cajas">
+  <component name="RunManager" selected="Python.all_par_vertices_short_path">
     <configuration name="Ejercicio_13" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -328,8 +309,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.greedy_conjunto_cajas" />
         <item itemvalue="Python.all_par_vertices_short_path" />
+        <item itemvalue="Python.greedy_conjunto_cajas" />
         <item itemvalue="Python.greedy_camino_menor_costo" />
         <item itemvalue="Python.Ejercicio_13_1" />
         <item itemvalue="Python.Ejercicio_13" />
@@ -346,13 +327,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524749766797</updated>
-    </task>
-    <task id="LOCAL-00024" summary="listo para enviar">
-      <created>1526568727602</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1526568727603</updated>
     </task>
     <task id="LOCAL-00025" summary="Cambiando nombre del archivo">
       <created>1526651112059</created>
@@ -690,7 +664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529614103497</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="greedy conjunto de cajas arreglado">
+      <created>1529627506914</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1529627506914</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -709,7 +690,7 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298193" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" weight="0.32831326" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.21084337" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.29819277" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3298193" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -729,7 +710,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rectificando cosillas" />
     <MESSAGE value="INtentanto corregir Ejercicio 11 y 12" />
     <MESSAGE value="Arreglando Ejercicio 12" />
     <MESSAGE value="Terminando de arreglar cosillas" />
@@ -754,7 +734,8 @@
     <MESSAGE value=" arreglando greedy seleccion de conjunto de cajas" />
     <MESSAGE value="agregando algoritmo de camino de costo minimo entre cada par de vertices" />
     <MESSAGE value="actualizando algoritmos" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizando algoritmos" />
+    <MESSAGE value="greedy conjunto de cajas arreglado" />
+    <option name="LAST_COMMIT_MESSAGE" value="greedy conjunto de cajas arreglado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1094,13 +1075,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/all_par_vertices_short_path.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/MCT_grafo_orientado.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1124,8 +1098,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/greedy_conjunto_cajas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="1" selection-end-line="18" selection-end-column="14" />
+        <state relative-caret-position="136">
+          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/all_par_vertices_short_path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="90" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
         </state>
       </provider>
     </entry>
