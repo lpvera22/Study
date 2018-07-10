@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c5cc6-046d-484e-a13b-cf210fa1402e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/backpack_greedy_problem.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/inserir_novo_elemento.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Greedy/greedy_calories_cake.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/apples_oranges.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lista#4 de Ejercicios/problema_unicidade.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lista#4 de Ejercicios/problema_unicidade.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,20 +18,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="inserir_novo_elemento.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/inserir_novo_elemento.py">
+      <file leaf-file-name="apples_oranges.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/algorithms/apples_oranges.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="backpack_greedy_problem.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/backpack_greedy_problem.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+              <folding>
+                <element signature="e#16#27#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,6 +116,8 @@
         <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/problema_unicidade.py" />
         <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/inserir_novo_elemento.py" />
         <option value="$PROJECT_DIR$/Lista#4 de Ejercicios/backpack_greedy_problem.py" />
+        <option value="$PROJECT_DIR$/Greedy/greedy_calories_cake.py" />
+        <option value="$PROJECT_DIR$/algorithms/apples_oranges.py" />
       </list>
     </option>
   </component>
@@ -139,7 +134,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,17 +144,13 @@
             <path>
               <item name="Study" type="b2602c69:ProjectViewProjectNode" />
               <item name="Study" type="462c0819:PsiDirectoryNode" />
-              <item name="Lista#4 de Ejercicios" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Study" type="462c0819:PsiDirectoryNode" />
-              <item name="Lista_Ejercicios_3" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,7 +177,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.inserir_novo_elemento">
+  <component name="RunManager" selected="Python.apples_oranges">
     <configuration name="Greedy_change_coins" type="PythonConfigurationType" factoryName="Python">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -206,7 +196,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="all_par_vertices_short_path" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="apples_oranges" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -214,11 +204,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lista#4 de Ejercicios" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithms" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lista#4 de Ejercicios/all_par_vertices_short_path.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithms/apples_oranges.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -242,7 +232,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="greedy_conjunto_cajas" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="greedy_calories_cake" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Study" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -250,11 +240,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lista#4 de Ejercicios" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Greedy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lista#4 de Ejercicios/greedy_conjunto_cajas.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Greedy/greedy_calories_cake.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -298,19 +288,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.Greedy_change_coins" />
-      <item itemvalue="Python.greedy_conjunto_cajas" />
-      <item itemvalue="Python.all_par_vertices_short_path" />
       <item itemvalue="Python.comprobar_secuencia_ordenada" />
       <item itemvalue="Python.problema_unicidade" />
       <item itemvalue="Python.inserir_novo_elemento" />
+      <item itemvalue="Python.greedy_calories_cake" />
+      <item itemvalue="Python.apples_oranges" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.apples_oranges" />
+        <item itemvalue="Python.greedy_calories_cake" />
         <item itemvalue="Python.inserir_novo_elemento" />
         <item itemvalue="Python.problema_unicidade" />
         <item itemvalue="Python.comprobar_secuencia_ordenada" />
-        <item itemvalue="Python.all_par_vertices_short_path" />
-        <item itemvalue="Python.greedy_conjunto_cajas" />
       </list>
     </recent_temporary>
   </component>
@@ -324,13 +314,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524749766797</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Algoritmo Recursivo de la mochila">
-      <created>1526860957074</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1526860957074</updated>
     </task>
     <task id="LOCAL-00028" summary="Agregando algunos comentarios">
       <created>1526861533288</created>
@@ -668,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530410589914</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="making chANGES">
+      <created>1531157959864</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1531157959868</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -684,16 +674,16 @@
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493994" visible="true" weight="0.24980783" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298193" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" weight="0.32831326" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.29819277" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3298193" />
       <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49730977" visible="true" weight="0.29819277" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info id="Favorites" order="2" sideWeight="0.506006" side_tool="true" weight="0.24980783" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990964" />
+      <window_info id="Favorites" order="2" sideWeight="0.506006" side_tool="true" weight="0.24980783" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24980783" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -748,7 +738,7 @@
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url />
+          <url>file://$PROJECT_DIR$/Lista#4 de Ejercicios/inserir_novo_elemento.py</url>
           <line>1</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
@@ -760,7 +750,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="58" />
+      <option name="time" value="62" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -773,28 +763,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tareas/Parte 1 Trabajo.py" />
-    <entry file="file://$PROJECT_DIR$/doble_lista.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lista de ejercicios2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2071">
-          <caret line="490" column="45" lean-forward="true" selection-start-line="486" selection-end-line="490" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ABPesquisa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="111" column="8" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ListaDobleEncad.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -856,13 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
           <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ABB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="24" lean-forward="true" selection-end-line="30" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1098,6 +1059,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/backpack_greedy_problem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/inserir_novo_elemento.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1105,10 +1073,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lista#4 de Ejercicios/backpack_greedy_problem.py">
+    <entry file="file://$PROJECT_DIR$/Greedy/greedy_calories_cake.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        <state relative-caret-position="340">
+          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ABB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="24" lean-forward="true" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dictionaries.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doble_lista.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/apples_oranges.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding>
+            <element signature="e#16#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
